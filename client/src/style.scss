@@ -1,0 +1,33 @@
+#heading {
+    color: white;
+    text-align: center;
+    font-size: 6rem;
+    font-family: "Rye";
+    margin-top: .2em;
+}
+
+#logo {
+    height: 8rem;
+    margin-top: 1rem;
+}
+
+.nav-buttons {
+    float: right;
+    list-style: none
+}
+
+.destination-card {
+    margin: 2rem;
+}
+
+#nav-header {
+    height: 10rem;
+    background-color: #157017;
+}
+
+@media screen and (max-width:720px){
+    #nav-header {
+        height: 20rem;
+        background-color: #157017;
+    }
+}
