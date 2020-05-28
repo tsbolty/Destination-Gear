@@ -1,17 +1,13 @@
 import React from 'react';
 // import logo from './destination-gear-favicon.png';
 import './style.scss';
-import Navbar from './components/Navbar'
-import DestinationCard from './components/DestinationCard'
+import Main from './components/Main'
 
 function App() {
   return (
     <>
-      <Navbar />
-      <DestinationCard />
+      <Main />
     </>
-    
-    
   );
 }
 

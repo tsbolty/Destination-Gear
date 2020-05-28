@@ -13,13 +13,13 @@ function Navbar(){
                 <Col size= "lg-9 sm-12">
                     <h1 id= "heading">Destination Gear</h1>
                 </Col>
-                <Col size= "lg-2 sm-10">
+                {/* <Col size= "lg-2 sm-10">
                     <ul>
                         <li className= "nav-buttons justify-content-center"><a href="/destinations">Destinations</a></li> 
                         <li className= "nav-buttons justify-content-center"><a href="/blog">Blog</a></li> 
                         <li className= "nav-buttons justify-content-center"><a href="/login">Login/Signup</a></li>
                     </ul>
-                </Col>
+                </Col> */}
                 
             </Row>
             <Row style= {{backgroundColor: "black", height: ".7rem"}}></Row>

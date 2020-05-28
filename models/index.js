@@ -1,3 +1,4 @@
 module.exports = {
-  // export all models here
+  Note: require('./NoteModel'),
+  User: require('./UserModel')
 };
