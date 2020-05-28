@@ -3,8 +3,7 @@ const Schema = mongoose.Schema;
 
 const NoteSchema = new Schema({
   title: String,
-  body: String,
-  ref: "User"
+  body: String
 });
 
 const Note = mongoose.model("Note", NoteSchema);

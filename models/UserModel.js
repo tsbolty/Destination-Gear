@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
-  userName: {
+  username: {
         type: String,
         trim: true,
         unique: true,
@@ -37,17 +37,21 @@ const UserSchema = new Schema({
         },
         required: "password is required"
     },
+    notes: [{
+        type: Schema.Types.ObjectId,
+        ref: "Note"
+    }],
     userCreated: {
         type: Date,
         default: Date.now
     }
 });
 
-usersSchema.methods.generateHash = function (password) {
+UserSchema.methods.generateHash = function (password) {
     return bcrypt.hashSync(password, bcrypt.genSaltSync(10));
 }
   
-usersSchema.methods.validPassword = function (password, encrypted) {
+UserSchema.methods.validPassword = function (password, encrypted) {
     return bcrypt.compareSync(password, encrypted);
 }
 

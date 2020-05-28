@@ -79,14 +79,16 @@ const reducer = (state, action) => {
 
 const StoreProvider = ({ value = [], ...props }) => {
   const [state, dispatch] = useReducer(reducer, {
-    posts: [],
-    currentPost: {
+    // notes: [],
+    currentUser: {
       _id: 0,
-      title: "",
-      body: "",
-      author: ""
+      userName: "",
+      firstName: "",
+      lastName: "",
+      email: "",
+      phoneNumber: "",
+      password: ""
     },
-    favorites: [],
     loading: false
   });
 
@@ -96,5 +98,7 @@ const StoreProvider = ({ value = [], ...props }) => {
 const useStoreContext = () => {
   return useContext(StoreContext);
 };
+
+
 
 export { StoreProvider, useStoreContext };
