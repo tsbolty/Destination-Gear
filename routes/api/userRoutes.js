@@ -39,8 +39,8 @@ router.post("/signup", function(req, res, next) {
         if (err) throw err;
         console.log("user saved!");
         // redirects to the login route as a post route *307*
-        res.redirect(307, "/api/users/login")
-      });  
+        // res.redirect(307, "/api/users/login")
+      })
     }
   })
 });

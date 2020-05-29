@@ -9,6 +9,10 @@ class Auth extends Component {
   state = {
     loggedIn: false,
     username: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
     password: "",
     confirmPassword: "",
     user: null,
@@ -28,7 +32,8 @@ class Auth extends Component {
     if (this.state.username && this.state.password) {
       API.login({
         username: this.state.username,
-        password: this.state.password
+        password: this.state.password,
+
       }).then(user => {
         console.log(user);
         if (user.data.loggedIn) {
@@ -51,8 +56,13 @@ class Auth extends Component {
   handleSignup = event => {
     event.preventDefault();
     if (this.state.username && this.state.password) {
+        console.log(this.state.username)
       API.signup({
         username: this.state.username,
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        email: this.state.email,
+        phoneNumber: this.state.phoneNumber,
         password: this.state.password
       }).then(user => {
         if (user.data.loggedIn) {
@@ -87,6 +97,10 @@ class Auth extends Component {
         ) : (
             <Signup
               username={this.state.username}
+              firstName={this.state.firstName}
+              lastName={this.state.lastName}
+              email={this.state.email}
+              phoneNumber={this.state.phoneNumber}
               password={this.state.password}
               confirmPassword={this.state.confirmPassword}
               handleSignup={this.handleSignup}
