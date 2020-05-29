@@ -6,7 +6,8 @@ import CreateNote from './CreateNote'
 import Login from './Login'
 import Splash from './Splash'
 import ViewNotes from './ViewNotes'
-import Signin from './Signin'
+import Auth from './Auth'
+
 
 const Main = ()=>{
 
@@ -23,8 +24,8 @@ const Main = ()=>{
             <Navbar />
             {/* <Splash /> */}
             {/* <DestinationCard /> */}
-            {/* <Signup /> */}
-            <Signin />
+            <Auth />
+            {/* <Login /> */}
             {/* <ViewNotes /> */}
             {/* <Login /> */}
         </>
