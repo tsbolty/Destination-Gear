@@ -8,4 +8,9 @@ router.post("/note", (req, res)=>{
     }).then(data => res.json(data))
 })
 
+router.get("/note", (req, res)=>{
+    db.Note.find()
+        .then(data=> res.json(data))
+})
+
 module.exports = router;
