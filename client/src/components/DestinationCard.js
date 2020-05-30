@@ -28,7 +28,7 @@ function DestinationCard(){
                                 { showChecklist 
                                     ? 
                                     <div>
-                                        <Checklist />
+                                        <Checklist destination={destination}/>
                                         <ViewNotes />
                                     </div> 
                                     :
