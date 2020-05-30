@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Login from "./Login";
 import Signup from "./Signup";
 import API from "../utils/API";
-// import "./Auth.scss";
+
 
 class Auth extends Component {
 
@@ -12,7 +12,6 @@ class Auth extends Component {
     firstName: "",
     lastName: "",
     email: "",
-    phoneNumber: "",
     password: "",
     confirmPassword: "",
     user: null,
@@ -56,13 +55,11 @@ class Auth extends Component {
   handleSignup = event => {
     event.preventDefault();
     if (this.state.username && this.state.password) {
-        console.log(this.state.username)
       API.signup({
         username: this.state.username,
         firstName: this.state.firstName,
         lastName: this.state.lastName,
         email: this.state.email,
-        phoneNumber: this.state.phoneNumber,
         password: this.state.password
       }).then(user => {
         if (user.data.loggedIn) {
@@ -100,7 +97,6 @@ class Auth extends Component {
               firstName={this.state.firstName}
               lastName={this.state.lastName}
               email={this.state.email}
-              phoneNumber={this.state.phoneNumber}
               password={this.state.password}
               confirmPassword={this.state.confirmPassword}
               handleSignup={this.handleSignup}

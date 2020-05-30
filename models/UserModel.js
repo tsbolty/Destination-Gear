@@ -22,10 +22,6 @@ const UserSchema = new Schema({
         unique: true,
         match: [/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/, "Please enter a valid e-mail address"]
     },
-    phoneNumber: {
-        type: Number,
-        unique: true
-    },
     password: {
         type: String,
         unique: false,

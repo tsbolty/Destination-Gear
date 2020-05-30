@@ -1,26 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import Row from "./Row";
 import Col from "./Col";
 import Destinations from "../utils/destinations.json"
+import Checklist from './Checklist';
+import ViewNotes from './ViewNotes'
 
 function DestinationCard(){
+    const [showChecklist, setShowChecklist] = useState(false)
+
+    const onClick = (id) => setShowChecklist(true)
+
+
     return(
         <>
             <Row>
             {Destinations.map(destination=>{
                 return(
-                    <Col size="lg-4 sm-12">
-                        <div className="card destination-card" style={{width: "18rem"}} key={destination.id}>
-                            <img src={destination.winterImage} className="card-img-top" alt="summer"></img>
-                            <div className="card-body">
-                                <p className="card-text">{destination.name}</p>
+                    <div key={destination.id}>
+                        <Col size= "12">
+                            <div>
+                                <img src={destination.summerImage} onClick={()=>onClick(destination.id)} className="destination-card" alt="summer"></img>
+                                <div>
+                                    <h2 className= "destination-text">{destination.name}</h2>
+                                </div>
                             </div>
-                        </div>
-                    </Col>
+                            <div>
+                                { showChecklist 
+                                    ? 
+                                    <div>
+                                        <Checklist />
+                                        <ViewNotes />
+                                    </div> 
+                                    :
+                                    null
+                                }
+                            </div>    
+                            
+                        </Col>
+                    </div>
                 )
             })}
             </Row>
-        </>
+        </> 
     )
 }
 

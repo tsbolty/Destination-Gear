@@ -1,3 +1,9 @@
+// @mixin phone {
+//     @media only screen and (max-width:480px){
+//         @content;
+//     }
+// }
+
 #heading {
     color: white;
     // text-align: center;
@@ -16,8 +22,38 @@
     list-style: none
 }
 
+// .card-div {
+
+//     .destination-card {
+//         height: 100%;
+//         width: 100%;
+//         position: relative;
+//     }
+    
+//     @include phone {
+//         .destination-card {
+//             height: 50%
+//         }
+//     }
+// }
+
 .destination-card {
-    margin: 2rem;
+    height: 100%;
+    width: 100%, auto;
+    position: relative;
+}
+
+.destination-text {
+    position: relative;
+    // top: 50%;
+    margin-bottom: 3rem;
+    text-align: center;
+    width: 100%;
+    color: white;
+    background: #C0B8C3;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    opacity: .8;
 }
 
 #nav-header {
@@ -31,6 +67,7 @@
     background: src="/images/colorado-summer.jpg";
     opacity: .4;
 }
+
 
 // @media screen and (max-width:720px){
 //     #nav-header {

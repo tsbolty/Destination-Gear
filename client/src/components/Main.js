@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar'
 import DestinationCard from './DestinationCard'
 import CreateNote from './CreateNote'
@@ -9,23 +9,18 @@ import Auth from './Auth'
 
 const Main = ()=>{
 
-    // state = {
-    //     loggedIn: false,
-    //     season: "summer"
-    // }
+    const [loggedIn, setLoggedIn] = useState(false)
+
+
 
     useEffect(() => {return Splash}, [])
 
     return(
         <>
-            
             <Navbar />
+            <DestinationCard />
             {/* <Splash /> */}
-            {/* <DestinationCard /> */}
-            <Auth action="login"/>
-            {/* <Login /> */}
-            <ViewNotes />
-            {/* <Login /> */}
+            <Auth />
         </>
     )
 
