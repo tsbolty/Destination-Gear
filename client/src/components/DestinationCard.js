@@ -8,13 +8,12 @@ import ViewNotes from './ViewNotes';
 
 function DestinationCard(){
     // const season = useContext(ThemeContext)
-    const [showChecklist, setShowChecklist] = useState(false)
+    // const [showChecklist, setShowChecklist] = useState(false)
 
     let match;
 
     const onClick = (id) => {
         match = id
-        setShowChecklist(true)
         return match;
     }
 
@@ -24,26 +23,21 @@ function DestinationCard(){
             {Destinations.map(destination=>{
                 return(
                     <div key={destination.id}>
-                        {/* <Col size= "12"> */}
+                        <Col size= "12">
                             <div className= "destination-card">
-                                {/* <img src={destination.summerImage} onClick={()=>onClick(destination.id)} className="destination-card" alt="summer"></img> */}
+                                <img src={destination.summerImage} onClick={()=>onClick(destination.id)} className="destination-card" alt="summer"></img>
                                 <div>
                                     <h2 className= "destination-text">{destination.name}</h2>
                                 </div>
                             </div>
                             <div>
-                                { showChecklist 
-                                    ? 
-                                    <div>
-                                        <Checklist destination={destination} key={match}/>
-                                        <ViewNotes />
-                                    </div> 
-                                    :
-                                    null
-                                }
+                                <div>
+                                    <Checklist destination={destination} />
+                                    <ViewNotes />
+                                </div>
                             </div>    
                             
-                        {/* </Col> */}
+                        </Col>
                     </div>
                 )
             })}

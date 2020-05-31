@@ -22,8 +22,6 @@ const ViewNotes = ()=>{
 
     return(
         <>
-            {loggedIn
-            ?
             <div>
                 <ul>
                     {array.map(note=>(
@@ -35,10 +33,7 @@ const ViewNotes = ()=>{
 
                 </ul>
                 <CreateNote getNotes = {getNotes}/>
-            </div>    
-            :
-            null
-            }
+            </div>
         </>
     )
 }
