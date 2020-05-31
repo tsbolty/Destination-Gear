@@ -1,17 +1,31 @@
 import React from 'react';
+import Destinations from '../utils/destinations.json';
 
 
-const Checklist = ({ destination })=>{
-    return(
-        <ul>
-            {destination.summerGearList.map(listItem=>(
-                <li>
+
+const Checklist = (props)=>{
+    
+    
+    
+    return (
+        <>
+            <ul>
+                {props.destination.summerGearList.map(listItem=> 
+                    <li>
+                        <input type="checkbox" id="cb1" key={Math.random(listItem.length)} name="cb1" />
+                        <label htmlFor="cb1">{listItem}</label>
+                    </li>
+                    
+                )} 
+                {/* <li>
                     <input type="checkbox" id="cb1" key={Math.random(listItem.length)} name="cb1" checked />
                     <label htmlFor="cb1">{listItem}</label>
-                </li>
-            ))}
-        </ul>
+                </li> */}
+                
+            </ul>
+        </>
     )
+    
 }
 
 export default Checklist;

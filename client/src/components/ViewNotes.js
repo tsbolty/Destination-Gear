@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import CreateNote from './CreateNote';
+import UserContext from './context/UserContext'
+
 
 const ViewNotes = ()=>{
 
     const [array, setArray] = useState([])
+    const { loggedIn } = useContext(UserContext)
     
     const getNotes = ()=>{
         axios.get("/api/note/note")
@@ -19,16 +22,23 @@ const ViewNotes = ()=>{
 
     return(
         <>
-        <ul>
-            {array.map(note=>(
-                <li>
-                    <h4>{note.title}</h4>
-                    <p>{note.body}</p>
-                </li>
-            ))}
+            {loggedIn
+            ?
+            <div>
+                <ul>
+                    {array.map(note=>(
+                        <li>
+                            <h4>{note.title}</h4>
+                            <p>{note.body}</p>
+                        </li>
+                    ))}
 
-        </ul>
-        <CreateNote getNotes = {getNotes}/>
+                </ul>
+                <CreateNote getNotes = {getNotes}/>
+            </div>    
+            :
+            null
+            }
         </>
     )
 }

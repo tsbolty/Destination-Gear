@@ -3,13 +3,20 @@ import Row from "./Row";
 import Col from "./Col";
 import Destinations from "../utils/destinations.json"
 import Checklist from './Checklist';
-import ViewNotes from './ViewNotes'
+import ViewNotes from './ViewNotes';
+// import ThemeContext from './context/ThemeContext'
 
 function DestinationCard(){
+    // const season = useContext(ThemeContext)
     const [showChecklist, setShowChecklist] = useState(false)
 
-    const onClick = (id) => setShowChecklist(true)
+    let match;
 
+    const onClick = (id) => {
+        match = id
+        setShowChecklist(true)
+        return match;
+    }
 
     return(
         <>
@@ -17,9 +24,9 @@ function DestinationCard(){
             {Destinations.map(destination=>{
                 return(
                     <div key={destination.id}>
-                        <Col size= "12">
-                            <div>
-                                <img src={destination.summerImage} onClick={()=>onClick(destination.id)} className="destination-card" alt="summer"></img>
+                        {/* <Col size= "12"> */}
+                            <div className= "destination-card">
+                                {/* <img src={destination.summerImage} onClick={()=>onClick(destination.id)} className="destination-card" alt="summer"></img> */}
                                 <div>
                                     <h2 className= "destination-text">{destination.name}</h2>
                                 </div>
@@ -28,7 +35,7 @@ function DestinationCard(){
                                 { showChecklist 
                                     ? 
                                     <div>
-                                        <Checklist destination={destination}/>
+                                        <Checklist destination={destination} key={match}/>
                                         <ViewNotes />
                                     </div> 
                                     :
@@ -36,7 +43,7 @@ function DestinationCard(){
                                 }
                             </div>    
                             
-                        </Col>
+                        {/* </Col> */}
                     </div>
                 )
             })}

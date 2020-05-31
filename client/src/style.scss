@@ -4,6 +4,21 @@
 //     }
 // }
 
+// .card-div {
+
+//     .destination-card {
+//         height: 100%;
+//         width: 100%;
+//         position: relative;
+//     }
+    
+//     @include phone {
+//         .destination-card {
+//             height: 50%
+//         }
+//     }
+// }
+
 #heading {
     color: white;
     // text-align: center;
@@ -22,26 +37,15 @@
     list-style: none
 }
 
-// .card-div {
 
-//     .destination-card {
-//         height: 100%;
-//         width: 100%;
-//         position: relative;
-//     }
-    
-//     @include phone {
-//         .destination-card {
-//             height: 50%
-//         }
-//     }
+
+
+// .destination-card {
+//     // height: 100%;
+//     // width: 100%;
+//     // margin: 0;
+//     position: relative;
 // }
-
-.destination-card {
-    height: 100%;
-    width: 100%, auto;
-    position: relative;
-}
 
 .destination-text {
     position: relative;
@@ -69,9 +73,49 @@
 }
 
 
-// @media screen and (max-width:720px){
-//     #nav-header {
-//         height: 20rem;
-//         background-color: #157017;
-//     }
-// }
+@mixin full-image($image-url) {
+    @extend %full-width-content-with-image;
+      background: url($image-url) no-repeat center center fixed;
+      background-size: cover;
+    &:after {
+      background: url($image-url) no-repeat center center fixed;
+      background-size: cover;
+    }
+    &:before {
+      background: url($image-url) no-repeat center center fixed;  
+      background-size: cover;
+    }
+  }
+  
+  %full-width-content-with-image {
+    position: relative;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 999px;
+    }
+    &:after {
+      right: 100%; 
+    }
+    &:before {
+      left: 100%;
+    }
+  }
+  
+  body, html {
+    overflow-x: hidden;
+  }
+  
+  .site-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 500px;
+    background: grey;
+  }
+  
+  .destination-card {
+      z-index: 999999;
+    @include full-image('http://www.commercekitchen.com/wp-content/uploads/2013/10/full-width-demo.jpg');
+  }

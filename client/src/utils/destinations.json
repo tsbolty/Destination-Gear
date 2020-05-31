@@ -1,5 +1,10 @@
 [
     {
+        "name": "Test Destination",
+        "id": 69,
+        "summerImage": "./images/destinationimages/testImage.png"
+    },
+    {
         "name": "Montana",
         "id": 1,
         "summerImage": "./images/destinationimages/montana-summer.jpg",

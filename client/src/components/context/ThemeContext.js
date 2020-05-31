@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
+import React, { createContext } from 'react';
 
-const ThemeContext = useContext("summer")
+const ThemeContext = createContext("summer")
 
 export default ThemeContext;
