@@ -6,11 +6,18 @@ import Splash from './Splash'
 import ViewNotes from './ViewNotes'
 import Auth from './Auth'
 import UserContext from './context/UserContext'
+import Loggedin from './Loggedin'
 
 
 const Main = ()=>{
 
-    // const [loggedIn, setLoggedIn] = useState(false)
+    const [loggedIn, setLoggedIn] = useState(false)
+    
+    // const handleAuthChange= ()=>{
+    //     const [loggedIn, setLoggedIn] = useState({
+    //         loggedIn: false
+    //     })
+    // }
 
 
 
@@ -19,10 +26,11 @@ const Main = ()=>{
     return(
         <>
             <Navbar />
-            <UserContext.Provider value={true}>
+            <Loggedin />
+            <UserContext.Provider value={{loggedIn: loggedIn}}>
                 <DestinationCard />
                 {/* <Splash /> */}
-                <Auth />
+                <Auth action={"login"}/>
             </UserContext.Provider>
         </>
     )

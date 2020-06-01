@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import Login from "./Login";
 import Signup from "./Signup";
 import API from "../utils/API";
-
 
 class Auth extends Component {
 
@@ -41,7 +40,7 @@ class Auth extends Component {
             user: user.data.user
           });
           console.log("log in successful");
-          window.location.href = '/profile';
+          // {this.props.handleAuthChange = true}
         }
         else if (user.data.message) {
           this.setState({
@@ -68,7 +67,7 @@ class Auth extends Component {
             user: user.data.user
           });
           console.log("log in successful");
-          window.location.href = '/profile';
+          
         } else {
           console.log("something went wrong :(")
           console.log(user.data);
@@ -76,7 +75,7 @@ class Auth extends Component {
             message: user.data
           })
         }
-      });
+      })
     }
   }
 

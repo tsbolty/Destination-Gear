@@ -4,15 +4,16 @@ import Col from "./Col";
 import Destinations from "../utils/destinations.json"
 import Checklist from './Checklist';
 import ViewNotes from './ViewNotes';
-// import ThemeContext from './context/ThemeContext'
 
 function DestinationCard(){
-    // const season = useContext(ThemeContext)
     // const [showChecklist, setShowChecklist] = useState(false)
 
     let match;
+    // var elementScrollTop = document.querySelectorAll("destination-card").scrollTop
+
 
     const onClick = (id) => {
+        // elementScrollTop += 200
         match = id
         return match;
     }
