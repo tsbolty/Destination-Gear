@@ -8,20 +8,28 @@ import ViewNotes from './ViewNotes';
 function DestinationCard(){
     // const [showChecklist, setShowChecklist] = useState(false)
 
-    let match;
+    
+    const [destinations, setDestinations] = useState(Destinations)
+
     // var elementScrollTop = document.querySelectorAll("destination-card").scrollTop
 
 
     const onClick = (id) => {
         // elementScrollTop += 200
-        match = id
-        return match;
+        const updated = destinations.map(destination=>{
+          if(destination.id === id){
+              destination.show = !destination.show
+          }
+          return destination
+        })
+        
+        setDestinations(updated)
     }
 
     return(
         <>
             <Row>
-            {Destinations.map(destination=>{
+            {destinations.map(destination=>{
                 return(
                     <div key={destination.id}>
                         <Col size= "12">
@@ -31,12 +39,12 @@ function DestinationCard(){
                                     <h2 className= "destination-text">{destination.name}</h2>
                                 </div>
                             </div>
-                            <div>
-                                <div>
-                                    <Checklist destination={destination} />
-                                    <ViewNotes />
-                                </div>
-                            </div>    
+                            {destination.show && <div>
+                                <Checklist destination={destination} />
+                                <ViewNotes />
+                            </div>
+                            }
+                               
                             
                         </Col>
                     </div>

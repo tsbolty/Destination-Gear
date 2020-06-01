@@ -5,6 +5,7 @@ const NavBar = () => {
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
   return (
+    
     <div>
       {!isAuthenticated && (
         <button onClick={() => loginWithRedirect({})}>Log in</button>

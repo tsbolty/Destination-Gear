@@ -1,6 +1,7 @@
 import React from "react";
 import Row from "./Row";
 import Col from "./Col";
+import NavBar from './NavBar'
 
 function Navbar(){
     return(
@@ -12,6 +13,7 @@ function Navbar(){
                 </Col>
                 <Col size= "4">
                     <h1 id= "heading">Destination Gear</h1>
+                    <NavBar />
                 </Col>
                 {/* <Col size= "lg-2 sm-10">
                     <ul>

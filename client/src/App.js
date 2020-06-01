@@ -12,9 +12,9 @@ function App() {
 
   return (
     <div className="App">
-      <header>
+      {/* <header>
         <NavBar />
-      </header>
+      </header> */}
       <Main />
     </div>
   );

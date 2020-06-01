@@ -1,5 +1,6 @@
 [
     {
+        "show": false,
         "name": "Montana",
         "id": 1,
         "summerImage": "./images/destinationimages/montana-summer.jpg",
@@ -74,6 +75,7 @@
         ]
     },
     {
+        "show": false,
         "name": "Colorado",
         "id": 2,
         "summerImage": "./images/destinationimages/colorado-summer.jpg",
@@ -148,6 +150,7 @@
         ]
     },
     {
+        "show": false,
         "name": "California",
         "id": 3,
         "summerImage": "./images/destinationimages/california-summer.jpg",
@@ -222,6 +225,7 @@
         ]
     },
     {
+        "show": false,
         "name": "Arizona",
         "id": 4,
         "summerImage": "./images/destinationimages/arizona-summer.jpg",
@@ -296,6 +300,7 @@
         ]
     },
     {
+        "show": false,
         "name": "Hawaii",
         "id": 5,
         "summerImage": "./images/destinationimages/hawaii-summer.jpg",
@@ -370,6 +375,7 @@
         ]
     },
     {
+        "show": false,
         "name": "Tennessee",
         "id": 6,
         "summerImage": "./images/destinationimages/tennessee-summer.jpg",
@@ -445,6 +451,7 @@
         ]
     },
     {
+        "show": false,
         "name": "Maine",
         "id": 7,
         "summerImage": "./images/destinationimages/maine-summer.jpg",
@@ -519,6 +526,7 @@
         ]
     },
     {
+        "show": false,
         "name": "Minnesota",
         "id": 8,
         "summerImage": "./images/destinationimages/minnesota-summer.jpg",
@@ -593,6 +601,7 @@
         ]
     },
     {
+        "show":false,
         "name": "Alaska",
         "id": 9,
         "summerImage": "./images/destinationimages/alaska-summer.jpg",
