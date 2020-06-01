@@ -8,6 +8,8 @@ const Profile = () => {
     return <div>Loading...</div>;
   }
 
+  const userEmail = user.email
+  
   return (
     <Fragment>
       <img src={user.picture} alt="Profile" />

@@ -1,14 +1,20 @@
 import React, { useRef } from 'react';
 import axios from "axios";
-import { PromiseProvider } from 'mongoose';
+// import { PromiseProvider } from 'mongoose';
+
+
+
 
 const CreateNote = ({ getNotes })=>{
 
     const titleRef = useRef();
     const bodyRef = useRef();
 
+    // add userEmail to axios call
+
     const handleFormSubmit = e => {
         e.preventDefault();
+        
         axios.post("/api/note/note", {
           title: titleRef.current.value,
           body: bodyRef.current.value
