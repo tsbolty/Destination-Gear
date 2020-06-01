@@ -9,15 +9,15 @@ const ViewNotes = ({id})=>{
 
     const { user } = useAuth0()
 
-    const userEmail = user.email
-
     const [array, setArray] = useState([])
     
     const getNotes = ()=>{
+        if(user){
         axios.get("/api/note/note")
             .then(res=> {
-                setArray(res.data.filter(note=> userEmail === note.userEmail && note.location == id))
+                setArray(res.data.filter(note=> user.email === note.userEmail && note.location == id))
             })
+        }
     }
 
     useEffect(()=>{
@@ -36,7 +36,8 @@ const ViewNotes = ({id})=>{
                     ))}
 
                 </ul>
-                <CreateNote getNotes={getNotes} key={id} id={id}/>
+                {user &&
+                <CreateNote getNotes={getNotes} key={id} id={id}/>}
             </div>
         </>
     )
