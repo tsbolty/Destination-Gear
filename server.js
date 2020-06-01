@@ -6,7 +6,6 @@ const passport = require("passport");
 const colors = require("colors");
 const logger = require("morgan");
 const flash = require('connect-flash');
-const db = require("./models");
 
 
 const app = express();
