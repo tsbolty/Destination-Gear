@@ -4,14 +4,12 @@ import Destinations from '../utils/destinations.json';
 
 
 const Checklist = (props)=>{
-    
-    
-    
+
     return (
         <>
-            <ul>
+            <ul className= "checkboxes">
                 {props.destination.summerGearList.map(listItem=> 
-                    <li>
+                    <li >
                         <input type="checkbox" id="cb1" key={Math.random(listItem.length)} name="cb1" />
                         <label htmlFor="cb1">{listItem}</label>
                     </li>

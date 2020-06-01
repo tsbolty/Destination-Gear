@@ -8,7 +8,7 @@ const Profile = () => {
     return <div>Loading...</div>;
   }
 
-  const userEmail = user.email
+ 
   
   return (
     <Fragment>

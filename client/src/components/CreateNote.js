@@ -1,14 +1,18 @@
 import React, { useRef } from 'react';
 import axios from "axios";
+// import {userEmail} from './Profile'
 // import { PromiseProvider } from 'mongoose';
+import { useAuth0 } from "../react-auth0-spa";
 
 
 
 
-const CreateNote = ({ getNotes })=>{
-
+const CreateNote = ({ getNotes, id })=>{
+    const { user } = useAuth0();
+    const destinationKey = id
     const titleRef = useRef();
     const bodyRef = useRef();
+
 
     // add userEmail to axios call
 
@@ -17,7 +21,9 @@ const CreateNote = ({ getNotes })=>{
         
         axios.post("/api/note/note", {
           title: titleRef.current.value,
-          body: bodyRef.current.value
+          body: bodyRef.current.value,
+          userEmail: user.email,
+          location: destinationKey
         })
         .then(res=> getNotes())
         .catch(err=> console.log(err))

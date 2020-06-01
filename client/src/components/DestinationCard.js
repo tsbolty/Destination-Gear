@@ -41,7 +41,7 @@ function DestinationCard(){
                             </div>
                             {destination.show && <div>
                                 <Checklist destination={destination} />
-                                <ViewNotes />
+                                <ViewNotes key={destination.id} id={destination.id}/>
                             </div>
                             }
                                
