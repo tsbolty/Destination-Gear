@@ -1,6 +1,5 @@
 import React from "react";
 import { useAuth0 } from "./react-auth0-spa";
-import NavBar from "./components/NavBar";
 import Main from './components/Main'
 
 function App() {
@@ -12,9 +11,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <header>
-        <NavBar />
-      </header> */}
       <Main />
     </div>
   );

@@ -1,9 +1,12 @@
 import React from "react";
 import Row from "./Row";
 import Col from "./Col";
-import NavBar from './NavBar'
+import { useAuth0 } from "../react-auth0-spa";
 
 function Navbar(){
+
+    const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+
     return(
         <> 
             <Row className= "justify-content-center" id= "nav-header">
@@ -13,7 +16,15 @@ function Navbar(){
                 </Col>
                 <Col size= "4">
                     <h1 id= "heading">Destination Gear</h1>
-                    <NavBar />
+                </Col>
+                <Col size= "1">
+                
+                    {!isAuthenticated && (
+                        <button onClick={() => loginWithRedirect({})}>Log in</button>
+                    )}
+
+                    {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+                
                 </Col>
                 {/* <Col size= "lg-2 sm-10">
                     <ul>
