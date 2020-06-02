@@ -4,6 +4,9 @@ import DestinationCard from './DestinationCard'
 import CreateNote from './CreateNote'
 import Splash from './Splash'
 import ViewNotes from './ViewNotes'
+import Calendar from './Calendar/index'
+import Datepicker from './Datepicker/index'
+
 
 
 const Main = ()=>{
@@ -29,12 +32,12 @@ const Main = ()=>{
         return season
     }
 
-    
-
     return(
         <>
             <button onClick= {handleSeasonClick}>Summer or Winter</button>
             <Navbar />
+            <Calendar />
+            <Datepicker />
             <DestinationCard season={season}/>
         </>
     )
