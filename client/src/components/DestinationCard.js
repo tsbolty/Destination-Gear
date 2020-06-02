@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import Row from "./Row";
 import Col from "./Col";
-import Destinations from "../utils/testdestinations.json"
+import Destinations from "../utils/destinations.json"
 import Checklist from './Checklist';
 import ViewNotes from './ViewNotes';
 

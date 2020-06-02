@@ -6,7 +6,9 @@ const Countdown = ()=>{
 
     const {currentTime, setCurrentTime} = useContext(TimeContext)
 
-    let timeLeft = moment(currentTime.slice(4)).format("MMM DD YYYY HH:MM:SS")
+    let timeLeft = moment(currentTime.slice(4)).fromNow()
+
+    console.log(timeLeft)
 
     let start = moment(currentTime)
     let end = moment(Date.now())
@@ -17,7 +19,7 @@ const Countdown = ()=>{
         ?
         <h2>When is your departure date?</h2>
         :
-        <h2>{end.to(start, true)} until departure</h2>
+        <h2>Your trip {timeLeft.includes("ago") ? "was" : "is"} {timeLeft} </h2>
         }
         </>
     )

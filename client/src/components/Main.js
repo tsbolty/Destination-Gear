@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import Navbar from './Navbar'
 import DestinationCard from './DestinationCard'
 import CreateNote from './CreateNote'
@@ -19,23 +19,30 @@ const Main = ()=>{
         winter: false
     })
 
+    const summer = ["May", "Jun", "Jul", "Aug", "Sep", "Oct"]
+    // const winter = /\bNov|\bDec|\bJan|\bFeb|\bMar|\bApr/g
+
+    
+    
+    useEffect(()=>{
+                const month = currentTime.split(" ")[1]
+                if(summer.includes(month)){
+                    setSeason({
+                        summer: true,
+                        winter: false
+                    })
+                } else { 
+                    setSeason({
+                        summer: false,
+                        winter: true
+                    })
+                }
+              
+    }, [currentTime])
+
+    
 
 
-    const handleSeasonChange = (e)=>{
-        e.preventDefault()
-        if(currentTime.includes("May" || "Jun" || "Jul" || "Sug" || "Sep" || "Oct")){
-            setSeason({
-                summer: false,
-                winter: true
-            })
-        } else if(currentTime.includes("Nov" || "Dec" || "Jan" || "Feb" || "Mar" || "Apr")){
-            setSeason({
-                summer: true,
-                winter: false
-            })
-        }
-        return season
-    }
 
     // if(currentTime.includes("May" || "Jun" || "Jul" || "Aug" || "Sep" || "Oct")){
     //     setSeason({
@@ -56,7 +63,7 @@ const Main = ()=>{
                     <button>Summer or Winter</button>
                     <Navbar />
                     <Countdown />
-                    <Calendar onClick= {handleSeasonChange}/>
+                    <Calendar />
                     <Datepicker />
                     <DestinationCard season={season}/>
                 </div>
