@@ -3,7 +3,7 @@
         "name": "Montana",
         "id": 1,
         "show": false,
-        "summerImage": "./images/destinationimages/montana-summer.jpg",
+        "summerImage": "./images/destinationimages/testImage.jpg",
         "winterImage": "./images/destinationimages/montana-winter.jpg",
         "summerGearList": [
             "https://www.rei.com/product/162950/nemo-disco-30-sleeping-bag-mens",
@@ -79,7 +79,7 @@
         "name": "Colorado",
         "id": 2,
         "show": false,
-        "summerImage": "./images/destinationimages/colorado-summer.jpg",
+        "summerImage": "./images/destinationimages/testImage.jpg",
         "winterImage": "./images/destinationimages/colorado-winter.jpg",
         "summerGearList": [
             "Sleeping Bag/ Pad",
@@ -154,7 +154,7 @@
         "name": "California",
         "id": 3,
         "show": false,
-        "summerImage": "./images/destinationimages/california-summer.jpg",
+        "summerImage": "./images/destinationimages/testImage.jpg",
         "winterImage": "./images/destinationimages/california-winter.jpg",
         "summerGearList": [
             "Sleeping Bag/ Pad",
@@ -229,7 +229,7 @@
         "name": "Arizona",
         "id": 4,
         "show": false,
-        "summerImage": "./images/destinationimages/arizona-summer.jpg",
+        "summerImage": "./images/destinationimages/testImage.jpg",
         "winterImage": "./images/destinationimages/arizona-winter.jpg",
         "summerGearList": [
             "Sleeping Bag/ Pad",
@@ -304,7 +304,7 @@
         "name": "Hawaii",
         "id": 5,
         "show": false,
-        "summerImage": "./images/destinationimages/hawaii-summer.jpg",
+        "summerImage": "./images/destinationimages/testImage.jpg",
         "winterImage": "./images/destinationimages/hawaii-winter.jpg",
         "summerGearList": [
             "Sleeping Bag/ Pad",
@@ -379,7 +379,7 @@
         "name": "Tennessee",
         "id": 6,
         "show": false,
-        "summerImage": "./images/destinationimages/tennessee-summer.jpg",
+        "summerImage": "./images/destinationimages/testImage.jpg",
         "winterImage": "./images/destinationimages/tennessee-winter.jpg",
         "summerGearList": [
             "Sleeping Bag/ Pad",
@@ -455,7 +455,7 @@
         "name": "Maine",
         "id": 7,
         "show": false,
-        "summerImage": "./images/destinationimages/maine-summer.jpg",
+        "summerImage": "./images/destinationimages/testImage.jpg",
         "winterImage": "./images/destinationimages/maine-winter.jpg",
         "summerGearList": [
             "Sleeping Bag/ Pad",
@@ -530,7 +530,7 @@
         "name": "Minnesota",
         "id": 8,
         "show": false,
-        "summerImage": "./images/destinationimages/minnesota-summer.jpg",
+        "summerImage": "./images/destinationimages/testImage.jpg",
         "winterImage": "./images/destinationimages/minnesota-winter.jpg",
         "summerGearList": [
             "Sleeping Bag/ Pad",
@@ -605,7 +605,7 @@
         "name": "Alaska",
         "id": 9,
         "show":false,
-        "summerImage": "./images/destinationimages/alaska-summer.jpg",
+        "summerImage": "./images/destinationimages/testImage.jpg",
         "winterImage": "./images/destinationimages/alaska-winter.jpg",
         "summerGearList": [
             "Sleeping Bag/ Pad", 

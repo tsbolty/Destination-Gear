@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Row from "./Row";
 import Col from "./Col";
-import Destinations from "../utils/destinations.json"
+import Destinations from "../utils/testdestinations.json"
 import Checklist from './Checklist';
 import ViewNotes from './ViewNotes';
 
@@ -32,23 +32,25 @@ function DestinationCard({ season }){
             {destinations.map(destination=>{
                 return(
                     <div key={destination.id}>
-                        <Col size= "lg-6">
+                        <Col size= "xl-6 sm-12">
                             <div className= "destination-card">
                                 {season.summer
                                 ?
-                                <img src={destination.summerImage} onClick={()=>onClick(destination.id)} className="destination-card" alt="summer"></img>
+                                <img src={destination.summerImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="summer"></img>
                                 :
-                                <img src={destination.winterImage} onClick={()=>onClick(destination.id)} className="destination-card" alt="winter"></img>
+                                <img src={destination.winterImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="winter"></img>
                                 }
                                 <div>
                                     <h2 className= "destination-text">{destination.name}</h2>
                                 </div>
                             </div>
+                        </Col>
+                        <Col size= "xl-6 sm-12">
                             {destination.show &&
-                            <div>
+                            <>
                                 <Checklist destination={destination} season= {season}/>
                                 <ViewNotes key={destination.id} id={destination.id}/>
-                            </div>   
+                            </>   
                             }
                         </Col>
                     </div>

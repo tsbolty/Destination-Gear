@@ -3,7 +3,6 @@ import Navbar from './Navbar'
 import DestinationCard from './DestinationCard'
 import CreateNote from './CreateNote'
 import Splash from './Splash'
-import ViewNotes from './ViewNotes'
 import Calendar from './Calendar/index'
 import Datepicker from './Datepicker/index'
 import TimeContext from './context/TimeContext'
@@ -38,11 +37,13 @@ const Main = ()=>{
     return(
         <>
             <TimeContext.Provider value={{currentTime, setCurrentTime}}>
-                <button onClick= {handleSeasonClick}>Summer or Winter</button>
-                <Navbar />
-                <Calendar />
-                <Datepicker />
-                <DestinationCard season={season}/>
+                <div className= "container">
+                    <button onClick= {handleSeasonClick}>Summer or Winter</button>
+                    <Navbar />
+                    <Calendar />
+                    <Datepicker />
+                    <DestinationCard season={season}/>
+                </div>
             </TimeContext.Provider>
         </>
     )
