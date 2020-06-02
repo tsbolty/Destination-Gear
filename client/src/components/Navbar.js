@@ -9,23 +9,16 @@ function Navbar(){
 
     return(
         <> 
-            <Row className= "justify-content-center" id= "nav-header">
+            <Row id= "nav-header">
             {/* <Row style= {{height: "10rem", backgroundColor: "#157017"}}> */}
-                <Col size= "2">
+                <div>
                     <img src= "./images/destination-gear-logo.png" alt= "logo" id= "logo"></img>
-                </Col>
-                <Col size= "4">
                     <h1 id= "heading">Destination Gear</h1>
-                </Col>
-                <Col size= "1">
-                
                     {!isAuthenticated && (
                         <button onClick={() => loginWithRedirect({})}>Log in</button>
-                    )}
-
+                        )}
                     {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
-                
-                </Col>
+                </div>
                 {/* <Col size= "lg-2 sm-10">
                     <ul>
                         <li className= "nav-buttons justify-content-center"><a href="/destinations">Destinations</a></li> 

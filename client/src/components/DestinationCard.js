@@ -5,7 +5,7 @@ import Destinations from "../utils/destinations.json"
 import Checklist from './Checklist';
 import ViewNotes from './ViewNotes';
 
-function DestinationCard(){
+function DestinationCard({ season }){
     // const [showChecklist, setShowChecklist] = useState(false)
 
     
@@ -32,21 +32,26 @@ function DestinationCard(){
             {destinations.map(destination=>{
                 return(
                     <div key={destination.id}>
-                        <Col size= "12">
+                        {/* <Col size= "12"> */}
                             <div className= "destination-card">
+                                {season.summer
+                                ?
                                 <img src={destination.summerImage} onClick={()=>onClick(destination.id)} className="destination-card" alt="summer"></img>
+                                :
+                                <img src={destination.winterImage} onClick={()=>onClick(destination.id)} className="destination-card" alt="winter"></img>
+                                }
                                 <div>
                                     <h2 className= "destination-text">{destination.name}</h2>
                                 </div>
                             </div>
                             {destination.show && <div>
-                                <Checklist destination={destination} />
+                                <Checklist destination={destination} season= {season}/>
                                 <ViewNotes key={destination.id} id={destination.id}/>
                             </div>
                             }
                                
                             
-                        </Col>
+                        {/* </Col> */}
                     </div>
                 )
             })}
