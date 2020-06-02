@@ -26,7 +26,7 @@ const ViewNotes = ({id})=>{
 
     return(
         <>
-            <div>
+            <div className= "col-lg-6">
                 <ul>
                     {array.map(note=>(
                         <li>

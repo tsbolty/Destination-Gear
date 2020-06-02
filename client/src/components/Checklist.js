@@ -37,7 +37,7 @@ const Checklist = ({ destination, season })=>{
 
     return (
         <>
-            <ul className= "checkboxes">
+            <ul className= "checkboxes col-lg-6">
                 {season.summer && destination.summerGearList.map((listItem, i)=> 
                     <li className= "checkboxListItem" key={Math.random(listItem.length)}>
                         <input type="checkbox" id="cb1"  className= "checklistInput" name="cb1" />

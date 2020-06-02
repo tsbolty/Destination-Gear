@@ -6,6 +6,7 @@ import Splash from './Splash'
 import Calendar from './Calendar/index'
 import Datepicker from './Datepicker/index'
 import TimeContext from './context/TimeContext'
+import Countdown from './Countdown'
 
 
 
@@ -40,6 +41,7 @@ const Main = ()=>{
                 <div className= "container">
                     <button onClick= {handleSeasonClick}>Summer or Winter</button>
                     <Navbar />
+                    <Countdown />
                     <Calendar />
                     <Datepicker />
                     <DestinationCard season={season}/>

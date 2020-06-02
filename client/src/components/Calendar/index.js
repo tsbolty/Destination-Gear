@@ -126,9 +126,11 @@ class Calendar extends Component {
     evt && evt.preventDefault();
     const { current } = this.state;
     const { onDateChanged } = this.props;
+    const selectedTime = this.context
 
     !(current && isSameDay(date, current)) &&
       this.setState(this.resolveStateFromDate(date), () => {
+        selectedTime.setCurrentTime(date.toString())
         typeof onDateChanged === "function" && onDateChanged(date);
       });
   }
@@ -199,10 +201,7 @@ class Calendar extends Component {
         typeof onDateChanged === "function" && onDateChanged(date);
       });
 
-      const selectedTime = this.context
-
-
-      selectedTime.setCurrentTime("something")
+     
   }
 
   clearDayTimeout = () => {

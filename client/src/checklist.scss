@@ -29,7 +29,7 @@
 .checkboxes {
   list-style: none;
   margin: 0;
-  background: #ffffff;
+  // background: #ffffff;
   padding: 0;
 
   @media (min-width: 36em) {
@@ -38,6 +38,7 @@
 
   li {
     position: relative;
+    // margin-top: 15px;
   }
 }
 
