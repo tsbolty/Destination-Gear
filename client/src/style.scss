@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/bootstrap";
+
 // @mixin phone {
 //     @media only screen and (max-width:480px){
 //         @content;
@@ -68,9 +70,21 @@
   background-color: #157017;
 }
 
-#splash {
+// #splash {
+//   width: 100%;
+//   height: 100%;
+//   background: src="/images/colorado-summer.jpg";
+//   opacity: .4;
+// }
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
   width: 100%;
-  height: 100%;
-  background: src="/images/colorado-summer.jpg";
-  opacity: .4;
 }

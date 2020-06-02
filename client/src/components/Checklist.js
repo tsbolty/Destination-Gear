@@ -19,18 +19,38 @@ const Checklist = ({ destination, season })=>{
     // }
 
 
+
+    // const listEl = document.querySelectorAll("checkboxListItem")
+  
+    // if(season.summer){
+    //     listEl.appendChild(destination.summerGearListUrl.map(url=>{
+    //         return <a href={url}>Product recommendation</a>
+    //     }))
+    // } else if (season.winter){
+    //     listEl.appendChild(destination.winterGearListUrl.map(url=>{
+    //         return <a href={url}>Product recommendation</a>
+    //     }))
+    // }
+
+    
+
+
     return (
         <>
             <ul className= "checkboxes">
                 {season.summer && destination.summerGearList.map(listItem=> 
-                        <li key={Math.random(listItem.length)}>
-                            <input type="checkbox" id="cb1"  className= "checklistInput" name="cb1" />
-                            <label htmlFor="cb1" className= "checkboxLabel">{listItem}</label>
-                        </li>
+                    <li className= "checkboxListItem" key={Math.random(listItem.length)}>
+                        <input type="checkbox" id="cb1"  className= "checklistInput" name="cb1" />
+                        {/* <label htmlFor="cb1" className= "checkboxLabel">
+                        {destination.summerGearListUrl.map(url=>{
+                            <a href={url}>{listItem}</a>
+                        })}
+                        </label> */}
+                    </li>
                 )}
                 
-                {season.winter && destination.winterGearList.map(listItem=> 
-                    <li key={Math.random(listItem.length)}>
+                {season.winter && destination.winterGearList.map(listItem=>
+                    <li className= "checkboxListItem" key={Math.random(listItem.length)}>
                         <input type="checkbox" id="cb1"  className= "checklistInput" name="cb1" />
                         <label htmlFor="cb1" className= "checkboxLabel">{listItem}</label>
                     </li>

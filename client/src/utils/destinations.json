@@ -39,7 +39,7 @@
             "Snow Shoes/ Spikes",
             "Facial covering/ Goggles"
         ],
-        "summerGearList-url": [
+        "summerGearListUrl": [
             "https://www.rei.com/product/162950/nemo-disco-30-sleeping-bag-mens",
             "https://www.rei.com/product/103050/sawyer-squeeze-water-filter-system",
             "https://www.rei.com/product/882613/osprey-ultralight-dry-sack",
@@ -56,7 +56,7 @@
             "https://www.rei.com/product/176396/spyderco-delica-4-fine-edge-knife",
             "https://www.rei.com/product/799528/sawyer-jungle-juice-100-pump-spray-insect-repellent-98-percent-deet-2-fl-oz"
         ],
-        "winterGearList-url": [
+        "winterGearListUrl": [
             "https://www.rei.com/product/162970/nemo-riff-15-sleeping-bag-mens",
             "https://www.rei.com/product/103050/sawyer-squeeze-water-filter-system",
             "https://www.rei.com/product/882613/osprey-ultralight-dry-sack",
@@ -114,7 +114,7 @@
             "Snow Shoes/ Spikes",
             "Base Layer"
         ],        
-        "summerGearList-url": [
+        "summerGearListUrl": [
             "https://www.rei.com/product/162950/nemo-disco-30-sleeping-bag-mens",
             "https://www.rei.com/product/103050/sawyer-squeeze-water-filter-system",
             "https://www.rei.com/product/882613/osprey-ultralight-dry-sack",
@@ -131,7 +131,7 @@
             "https://www.rei.com/product/176396/spyderco-delica-4-fine-edge-knife",
             "https://www.rei.com/product/799528/sawyer-jungle-juice-100-pump-spray-insect-repellent-98-percent-deet-2-fl-oz"
         ],
-        "winterGearList-url": [
+        "winterGearListUrl": [
             "https://www.rei.com/product/162970/nemo-riff-15-sleeping-bag-mens",
             "https://www.rei.com/product/103050/sawyer-squeeze-water-filter-system",
             "https://www.rei.com/product/882613/osprey-ultralight-dry-sack",
@@ -189,7 +189,7 @@
             "Snow Shoes/ Spikes",
             "Base Layer"
         ],
-        "summerGearList-url": [
+        "summerGearListUrl": [
             "https://www.rei.com/product/162949/nemo-forte-35-sleeping-bag-mens",
             "https://www.rei.com/product/103050/sawyer-squeeze-water-filter-system",
             "https://www.rei.com/product/882613/osprey-ultralight-dry-sack",
@@ -206,7 +206,7 @@
             "https://www.rei.com/product/176396/spyderco-delica-4-fine-edge-knife",
             "https://www.rei.com/product/799528/sawyer-jungle-juice-100-pump-spray-insect-repellent-98-percent-deet-2-fl-oz"
         ],
-        "winterGearList-url": [
+        "winterGearListUrl": [
             "https://www.rei.com/product/145118/nemo-banshee-20-sleeping-quilt",
             "https://www.rei.com/product/103050/sawyer-squeeze-water-filter-system",
             "https://www.rei.com/product/882613/osprey-ultralight-dry-sack",
@@ -264,7 +264,7 @@
             "Tent",
             "Camp Clothes"
         ],
-        "summerGearList-url": [
+        "summerGearListUrl": [
             "https://www.rei.com/product/162949/nemo-forte-35-sleeping-bag-mens",
             "https://www.rei.com/product/103050/sawyer-squeeze-water-filter-system",
             "https://www.rei.com/product/882613/osprey-ultralight-dry-sack",
@@ -281,7 +281,7 @@
             "https://www.rei.com/product/176396/spyderco-delica-4-fine-edge-knife",
             "https://www.rei.com/product/126426/hydrapak-seeker-collapsible-water-container-4-liters"
         ],
-        "winterGearList-url": [
+        "winterGearListUrl": [
             "https://www.rei.com/product/145118/nemo-banshee-20-sleeping-quilt",
             "https://www.rei.com/product/103050/sawyer-squeeze-water-filter-system",
             "https://www.rei.com/product/882613/osprey-ultralight-dry-sack",
@@ -339,7 +339,7 @@
             "Camp Clothes",
             "Bug Spray"
         ],
-        "summerGearList-url": [
+        "summerGearListUrl": [
             "https://www.rei.com/product/162949/nemo-forte-35-sleeping-bag-mens",
             "https://www.rei.com/product/103050/sawyer-squeeze-water-filter-system",
             "https://www.rei.com/product/882613/osprey-ultralight-dry-sack",
@@ -356,7 +356,7 @@
             "https://www.rei.com/product/176396/spyderco-delica-4-fine-edge-knife",
             "https://www.rei.com/product/799528/sawyer-jungle-juice-100-pump-spray-insect-repellent-98-percent-deet-2-fl-oz"
         ],
-        "winterGearList-url": [
+        "winterGearListUrl": [
             "https://www.rei.com/product/145118/nemo-banshee-20-sleeping-quilt",
             "https://www.rei.com/product/103050/sawyer-squeeze-water-filter-system",
             "https://www.rei.com/product/882613/osprey-ultralight-dry-sack",
@@ -414,7 +414,7 @@
             "Headlamp",
             "Base Layer"
         ],
-        "summerGearList-url": [
+        "summerGearListUrl": [
             "https://www.rei.com/product/162949/nemo-forte-35-sleeping-bag-mens",
             "https://www.rei.com/product/103050/sawyer-squeeze-water-filter-system",
             "https://www.rei.com/product/882613/osprey-ultralight-dry-sack",
@@ -431,7 +431,7 @@
             "https://www.rei.com/product/176396/spyderco-delica-4-fine-edge-knife",
             "https://www.rei.com/product/799528/sawyer-jungle-juice-100-pump-spray-insect-repellent-98-percent-deet-2-fl-oz"
         ],
-        "winterGearList-url": [
+        "winterGearListUrl": [
             "https://www.rei.com/product/145118/nemo-banshee-20-sleeping-quilt",
             "https://www.rei.com/product/103050/sawyer-squeeze-water-filter-system",
             "https://www.rei.com/product/882613/osprey-ultralight-dry-sack",
@@ -490,7 +490,7 @@
             "Snow Shoes",
             "Base Layer"
         ],
-        "summerGearList-url": [
+        "summerGearListUrl": [
             "https://www.rei.com/product/162950/nemo-disco-30-sleeping-bag-mens",
             "https://www.rei.com/product/103050/sawyer-squeeze-water-filter-system",
             "https://www.rei.com/product/882613/osprey-ultralight-dry-sack",
@@ -507,7 +507,7 @@
             "https://www.rei.com/product/176396/spyderco-delica-4-fine-edge-knife",
             "https://www.rei.com/product/799528/sawyer-jungle-juice-100-pump-spray-insect-repellent-98-percent-deet-2-fl-oz"
         ],
-        "winterGearList-url": [
+        "winterGearListUrl": [
             "https://www.rei.com/product/162970/nemo-riff-15-sleeping-bag-mens",
             "https://www.rei.com/product/103050/sawyer-squeeze-water-filter-system",
             "https://www.rei.com/product/882613/osprey-ultralight-dry-sack",
@@ -565,7 +565,7 @@
             "Snow Shoes",
             "Facial Coverings"
         ],
-        "summerGearList-url": [
+        "summerGearListUrl": [
             "https://www.rei.com/product/162950/nemo-disco-30-sleeping-bag-mens",
             "https://www.rei.com/product/103050/sawyer-squeeze-water-filter-system",
             "https://www.rei.com/product/882613/osprey-ultralight-dry-sack",
@@ -582,7 +582,7 @@
             "https://www.rei.com/product/176396/spyderco-delica-4-fine-edge-knife",
             "https://www.rei.com/product/799528/sawyer-jungle-juice-100-pump-spray-insect-repellent-98-percent-deet-2-fl-oz"
         ],
-        "winterGearList-url": [
+        "winterGearListUrl": [
             "https://www.rei.com/product/162970/nemo-riff-15-sleeping-bag-mens",
             "https://www.rei.com/product/103050/sawyer-squeeze-water-filter-system",
             "https://www.rei.com/product/882613/osprey-ultralight-dry-sack",
@@ -640,7 +640,7 @@
             "Snow Shoes",
             "Facial Coverings"
         ],        
-        "summerGearList-url": [
+        "summerGearListUrl": [
             "https://www.rei.com/product/162950/nemo-disco-30-sleeping-bag-mens",
             "https://www.rei.com/product/103050/sawyer-squeeze-water-filter-system",
             "https://www.rei.com/product/882613/osprey-ultralight-dry-sack",
@@ -657,7 +657,7 @@
             "https://www.rei.com/product/176396/spyderco-delica-4-fine-edge-knife",
             "https://www.rei.com/product/799528/sawyer-jungle-juice-100-pump-spray-insect-repellent-98-percent-deet-2-fl-oz"
         ],
-        "winterGearList-url": [
+        "winterGearListUrl": [
             "https://www.rei.com/product/162970/nemo-riff-15-sleeping-bag-mens",
             "https://www.rei.com/product/103050/sawyer-squeeze-water-filter-system",
             "https://www.rei.com/product/882613/osprey-ultralight-dry-sack",

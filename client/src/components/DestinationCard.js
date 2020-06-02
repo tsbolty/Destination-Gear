@@ -32,7 +32,7 @@ function DestinationCard({ season }){
             {destinations.map(destination=>{
                 return(
                     <div key={destination.id}>
-                        {/* <Col size= "12"> */}
+                        <Col size= "12" className= "column">
                             <div className= "destination-card">
                                 {season.summer
                                 ?
@@ -44,14 +44,15 @@ function DestinationCard({ season }){
                                     <h2 className= "destination-text">{destination.name}</h2>
                                 </div>
                             </div>
-                            {destination.show && <div>
+                            {destination.show &&
+                            <div>
                                 <Checklist destination={destination} season= {season}/>
                                 <ViewNotes key={destination.id} id={destination.id}/>
-                            </div>
+                            </div>   
                             }
                                
                             
-                        {/* </Col> */}
+                        </Col>
                     </div>
                 )
             })}
