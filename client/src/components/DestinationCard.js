@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Row from "./Row";
 import Col from "./Col";
 import Destinations from "../utils/testdestinations.json"
@@ -6,16 +6,28 @@ import Checklist from './Checklist';
 import ViewNotes from './ViewNotes';
 
 function DestinationCard({ season }){
-    // const [showChecklist, setShowChecklist] = useState(false)
 
-    
     const [destinations, setDestinations] = useState(Destinations)
 
-    // var elementScrollTop = document.querySelectorAll("destination-card").scrollTop
+    // $(".button").on("click", function(e) {
+    //     $(document).scrollTop($(this).parent().next().offset().top);
+    //     // $(this).parent().next() // this is the next div container.
+    //     return false; // prevent anchor
+    // });
+
+    // const scrollBtn = document.getElementById("scroll-button")
+
+
+    // document.addEventListener('click', function(event){
+    //     if(event.target.matches(scrollBtn)){
+    //         event.preventDefault()
+    //         document.scrollTop(this.parent().next().offset().top)
+    //     }
+    // })
+   
 
 
     const onClick = (id) => {
-        // elementScrollTop += 200
         const updated = destinations.map(destination=>{
           if(destination.id === id){
               destination.show = !destination.show
@@ -30,7 +42,7 @@ function DestinationCard({ season }){
         <>
             <div className= "container-fluid">
                 <div className= "row">
-            {destinations.map(destination=>{
+            {destinations.map((destination, i)=>{
                 return(
                     <>
                     <div key={destination.id} className= "destination-card col-lg-6 half-left">

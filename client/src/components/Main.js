@@ -19,14 +19,16 @@ const Main = ()=>{
         winter: false
     })
 
-    const handleSeasonClick = (e)=>{
+
+
+    const handleSeasonChange = (e)=>{
         e.preventDefault()
-        if(season.summer){
+        if(currentTime.includes("May" || "Jun" || "Jul" || "Sug" || "Sep" || "Oct")){
             setSeason({
                 summer: false,
                 winter: true
             })
-        } else if(season.winter){
+        } else if(currentTime.includes("Nov" || "Dec" || "Jan" || "Feb" || "Mar" || "Apr")){
             setSeason({
                 summer: true,
                 winter: false
@@ -35,14 +37,26 @@ const Main = ()=>{
         return season
     }
 
+    // if(currentTime.includes("May" || "Jun" || "Jul" || "Aug" || "Sep" || "Oct")){
+    //     setSeason({
+    //         summer: true,
+    //         winter: false
+    //     })
+    // } else if(currentTime.includes("Nov" || "Dec" || "Jan" || "Feb" || "Mar" || "Apr")){
+    //     setSeason({
+    //         summer: false,
+    //         winter: true
+    //     })
+    // }
+
     return(
         <>
             <TimeContext.Provider value={{currentTime, setCurrentTime}}>
                 <div className= "container">
-                    <button onClick= {handleSeasonClick}>Summer or Winter</button>
+                    <button>Summer or Winter</button>
                     <Navbar />
                     <Countdown />
-                    <Calendar />
+                    <Calendar onClick= {handleSeasonChange}/>
                     <Datepicker />
                     <DestinationCard season={season}/>
                 </div>
