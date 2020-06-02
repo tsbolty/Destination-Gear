@@ -11,8 +11,11 @@ import calendar, {
   WEEK_DAYS,
   CALENDAR_MONTHS
 } from "../../helpers/calendar";
+import TimeContext from '../context/TimeContext'
 
 class Calendar extends Component {
+
+  static contextType = TimeContext
   
   state = { ...this.resolveStateFromProp(), today: new Date() };
 
@@ -195,6 +198,11 @@ class Calendar extends Component {
       this.setState(this.resolveStateFromDate(date), () => {
         typeof onDateChanged === "function" && onDateChanged(date);
       });
+
+      const selectedTime = this.context
+
+
+      selectedTime.setCurrentTime("something")
   }
 
   clearDayTimeout = () => {

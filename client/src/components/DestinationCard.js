@@ -32,7 +32,7 @@ function DestinationCard({ season }){
             {destinations.map(destination=>{
                 return(
                     <div key={destination.id}>
-                        <Col size= "12" className= "column">
+                        <Col size= "lg-6">
                             <div className= "destination-card">
                                 {season.summer
                                 ?
@@ -50,8 +50,6 @@ function DestinationCard({ season }){
                                 <ViewNotes key={destination.id} id={destination.id}/>
                             </div>   
                             }
-                               
-                            
                         </Col>
                     </div>
                 )

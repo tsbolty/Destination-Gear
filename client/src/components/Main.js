@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Navbar from './Navbar'
 import DestinationCard from './DestinationCard'
 import CreateNote from './CreateNote'
@@ -6,10 +6,13 @@ import Splash from './Splash'
 import ViewNotes from './ViewNotes'
 import Calendar from './Calendar/index'
 import Datepicker from './Datepicker/index'
+import TimeContext from './context/TimeContext'
 
 
 
 const Main = ()=>{
+
+    const [currentTime, setCurrentTime] = useState("")
 
     const [season, setSeason] = useState({
         summer: true,
@@ -34,11 +37,13 @@ const Main = ()=>{
 
     return(
         <>
-            <button onClick= {handleSeasonClick}>Summer or Winter</button>
-            <Navbar />
-            <Calendar />
-            <Datepicker />
-            <DestinationCard season={season}/>
+            <TimeContext.Provider value={{currentTime, setCurrentTime}}>
+                <button onClick= {handleSeasonClick}>Summer or Winter</button>
+                <Navbar />
+                <Calendar />
+                <Datepicker />
+                <DestinationCard season={season}/>
+            </TimeContext.Provider>
         </>
     )
 }

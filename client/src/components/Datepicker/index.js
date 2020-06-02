@@ -3,8 +3,11 @@ import PropTypes from "prop-types";
 import Calendar from "../Calendar";
 import * as Styled from "./styles";
 import { isDate, getDateISO } from "../../helpers/calendar";
+import TimeContext from '../context/TimeContext'
 
 class Datepicker extends React.Component {
+
+  static contextType = TimeContext
   
   state = { date: null, calendarOpen: false }
 
@@ -12,24 +15,30 @@ class Datepicker extends React.Component {
 
   handleChange = evt => evt.preventDefault()
 
+  
+  componentDidMount() {
+    const { value: date } = this.props;
+    const newDate = date && new Date(date);
+    // const selectedTime = this.context
+    
+    
+    isDate(newDate) && this.setState({ date: getDateISO(newDate) });
+  }
+  
   handleDateChange = date => {
     const { onDateChanged } = this.props;
     const { date: currentDate } = this.state;
     const newDate = date ? getDateISO(date) : null;
+    // const selectedTime = this.context
+
+
+    // selectedTime.setCurrentTime("something")
 
     currentDate !== newDate &&
       this.setState({ date: newDate, calendarOpen: false }, () => {
         typeof onDateChanged === "function" && onDateChanged(this.state.date);
       });
   }
-
-  componentDidMount() {
-    const { value: date } = this.props;
-    const newDate = date && new Date(date);
-
-    isDate(newDate) && this.setState({ date: getDateISO(newDate) });
-  }
-
   componentDidUpdate(prevProps) {
     const { value: date } = this.props;
     const { value: prevDate } = prevProps;
@@ -37,6 +46,11 @@ class Datepicker extends React.Component {
     const prevDateISO = getDateISO(new Date(prevDate));
 
     dateISO !== prevDateISO && this.setState({ date: dateISO });
+
+    const selectedTime = this.context
+
+
+    selectedTime.setCurrentTime("something")
   }
 
 

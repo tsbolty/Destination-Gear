@@ -38,14 +38,14 @@ const Checklist = ({ destination, season })=>{
     return (
         <>
             <ul className= "checkboxes">
-                {season.summer && destination.summerGearList.map(listItem=> 
+                {season.summer && destination.summerGearList.map((listItem, i)=> 
                     <li className= "checkboxListItem" key={Math.random(listItem.length)}>
                         <input type="checkbox" id="cb1"  className= "checklistInput" name="cb1" />
-                        {/* <label htmlFor="cb1" className= "checkboxLabel">
-                        {destination.summerGearListUrl.map(url=>{
-                            <a href={url}>{listItem}</a>
-                        })}
-                        </label> */}
+                        <label htmlFor="cb1" className= "checkboxLabel">
+                       
+                            <a target= "_blank" href={destination.summerGearListUrl[i]}>{listItem}</a>
+                      
+                        </label>
                     </li>
                 )}
                 
