@@ -10,7 +10,7 @@ const Countdown = ()=>{
     
 
     return(
-        <>
+        <div id= "countdown">
         {timeTilDeparture === "Invalid date"
         ?
         <h2>When is your departure date?</h2>
@@ -18,7 +18,7 @@ const Countdown = ()=>{
         <h2>Your trip {timeTilDeparture.includes("ago") ? "was" : "is"} {timeTilDeparture} </h2>
         }
         
-        </>
+        </div>
     )
 }
 

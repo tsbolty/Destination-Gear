@@ -25,6 +25,18 @@ function DestinationCard({ season }){
     //         document.scrollTop(this.parent().next().offset().top)
     //     }
     // })
+    
+    var direction;
+
+    for (const destination of destinations){
+        if (destination.id %2 === 0){
+            direction = "left"
+        } else {
+            direction = "right"
+        }
+    }
+        
+    
 
     
 
@@ -43,10 +55,13 @@ function DestinationCard({ season }){
         <>
             <div className= "container-fluid">
                 <div className= "row">
-            {destinations.map((destination)=>{
+            {destinations.map((destination, i)=>{
                 return(
                     <>
-                    <div key={destination.id} className= "col-lg-6 half-left">
+                    {i %2 === 0
+                    ?
+                    <>
+                    <div key={destination.id} className= {`col-lg-6 half-${i %2 === 0 ? "left" : "right"}`}>
                         {/* <Col size= "xl-6 sm-12"> */}
                         {season.summer
                         ?
@@ -58,8 +73,8 @@ function DestinationCard({ season }){
                             <h2 className= "destination-text">{destination.name}</h2>
                         </div>
                     </div>
-                    <div className= "col-lg-6 half-right">
-                        <div >
+                    <div className= {`col-lg-6 half-${i %2 === 0 ? "right" : "left"}`}>
+                        <div>
                             {destination.show &&
                             <>
                                 <Checklist destination={destination} season= {season}/>
@@ -68,6 +83,33 @@ function DestinationCard({ season }){
                             }
                         </div>
                     </div>
+                    </>
+                    :
+                    <>
+                    <div className= {`col-lg-6 half-${i %2 === 0 ? "right" : "left"}`}>
+                        <div>
+                            {destination.show &&
+                            <>
+                                <Checklist destination={destination} season= {season}/>
+                                <ViewNotes key={destination.id} id={destination.id}/>
+                            </>   
+                            }
+                        </div>
+                    </div>
+                    <div key={destination.id} className= {`col-lg-6 half-${i %2 === 0 ? "left" : "right"}`}>
+                        {/* <Col size= "xl-6 sm-12"> */}
+                        {season.summer
+                        ?
+                        <img src={destination.summerImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="summer"></img>
+                        :
+                        <img src={destination.winterImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="winter"></img>
+                        }
+                        <div>
+                            <h2 className= "destination-text">{destination.name}</h2>
+                        </div>
+                    </div>
+                    </>
+                    }
                     </>
                 )
             })}

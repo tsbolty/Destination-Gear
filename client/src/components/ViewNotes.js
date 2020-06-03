@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CreateNote from './CreateNote';
 import { useAuth0 } from "../react-auth0-spa";
-import { node } from 'prop-types';
 
 
 const ViewNotes = ({id})=>{
