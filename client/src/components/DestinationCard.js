@@ -1,4 +1,5 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 import Row from "./Row";
 import Col from "./Col";
 import Destinations from "../utils/destinations.json"
@@ -24,8 +25,8 @@ function DestinationCard({ season }){
     //         document.scrollTop(this.parent().next().offset().top)
     //     }
     // })
-   
 
+    
 
     const onClick = (id) => {
         const updated = destinations.map(destination=>{
@@ -42,10 +43,10 @@ function DestinationCard({ season }){
         <>
             <div className= "container-fluid">
                 <div className= "row">
-            {destinations.map((destination, i)=>{
+            {destinations.map((destination)=>{
                 return(
                     <>
-                    <div key={destination.id} className= "destination-card col-lg-6 half-left">
+                    <div key={destination.id} className= "col-lg-6 half-left">
                         {/* <Col size= "xl-6 sm-12"> */}
                         {season.summer
                         ?
@@ -58,9 +59,6 @@ function DestinationCard({ season }){
                         </div>
                     </div>
                     <div className= "col-lg-6 half-right">
-                            
-                        {/* </Col> */}
-                        {/* <Col size= "xl-6 sm-12"> */}
                         <div >
                             {destination.show &&
                             <>
@@ -69,7 +67,6 @@ function DestinationCard({ season }){
                             </>   
                             }
                         </div>
-                        {/* </Col> */}
                     </div>
                     </>
                 )

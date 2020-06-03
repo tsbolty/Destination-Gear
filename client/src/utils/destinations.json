@@ -1,10 +1,10 @@
 [
     {
-        "name": "Montana",
+        "name": "Swiss Alps",
         "id": 1,
         "show": false,
-        "summerImage": "./images/destinationimages/montana-summer.jpg",
-        "winterImage": "./images/destinationimages/montana-winter.jpg",
+        "summerImage": "./images/destinationimages/swissAlps-summer.jpg",
+        "winterImage": "./images/destinationimages/swissAlps-winter.jpg",
         "summerGearList": [
             "Sleeping Bag/ Pad",
             "Water Bottle/ Treatment",
@@ -75,11 +75,11 @@
         ]
     },
     {
-        "name": "Colorado",
+        "name": "Maroon Bells",
         "id": 2,
         "show": false,
-        "summerImage": "./images/destinationimages/colorado-summer.jpg",
-        "winterImage": "./images/destinationimages/colorado-winter.jpg",
+        "summerImage": "./images/destinationimages/maroonBells-summer.jpg",
+        "winterImage": "./images/destinationimages/maroonBells-winter.jpg",
         "summerGearList": [
             "Sleeping Bag/ Pad",
             "Water Bottle/ Treatment",
@@ -150,11 +150,11 @@
         ]
     },
     {
-        "name": "California",
+        "name": "Safari",
         "id": 3,
         "show": false,
-        "summerImage": "./images/destinationimages/california-summer.jpg",
-        "winterImage": "./images/destinationimages/california-winter.jpg",
+        "summerImage": "./images/destinationimages/safari-summer.jpg",
+        "winterImage": "./images/destinationimages/safari-winter.jpg",
         "summerGearList": [
             "Sleeping Bag/ Pad",
             "Water Bottle/ Treatment",
@@ -300,11 +300,11 @@
         ]
     },
     {
-        "name": "Hawaii",
+        "name": "Amazon Rainforest",
         "id": 5,
         "show": false,
-        "summerImage": "./images/destinationimages/hawaii-summer.jpg",
-        "winterImage": "./images/destinationimages/hawaii-winter.jpg",
+        "summerImage": "./images/destinationimages/amazon-summer.jpg",
+        "winterImage": "./images/destinationimages/amazon-winter.jpg",
         "summerGearList": [
             "Sleeping Bag/ Pad",
             "Water Bottle/ Treatment",
@@ -375,11 +375,11 @@
         ]
     },
     {
-        "name": "Tennessee",
+        "name": "Cairngorms",
         "id": 6,
         "show": false,
-        "summerImage": "./images/destinationimages/tennessee-summer.jpg",
-        "winterImage": "./images/destinationimages/tennessee-winter.jpg",
+        "summerImage": "./images/destinationimages/cairngorms-summer.jpg",
+        "winterImage": "./images/destinationimages/cairngorms-winter.jpg",
         "summerGearList": [
             "Sleeping Bag/ Pad",
             "Water Bottle/ Treatment",
@@ -451,11 +451,11 @@
         ]
     },
     {
-        "name": "Maine",
+        "name": "Australian Outback",
         "id": 7,
         "show": false,
-        "summerImage": "./images/destinationimages/maine-summer.jpg",
-        "winterImage": "./images/destinationimages/maine-winter.jpg",
+        "summerImage": "./images/destinationimages/outback-summer.jpg",
+        "winterImage": "./images/destinationimages/outback-winter.jpg",
         "summerGearList": [
             "Sleeping Bag/ Pad",
             "Water Bottle/ Treatment",
@@ -526,11 +526,11 @@
         ]
     },
     {
-        "name": "Minnesota",
+        "name": "Appalachian Mountains",
         "id": 8,
         "show": false,
-        "summerImage": "./images/destinationimages/minnesota-summer.jpg",
-        "winterImage": "./images/destinationimages/minnesota-winter.jpg",
+        "summerImage": "./images/destinationimages/appalachian-summer.jpg",
+        "winterImage": "./images/destinationimages/appalachian-winter.jpg",
         "summerGearList": [
             "Sleeping Bag/ Pad",
             "Water Bottle/ Treatment",
@@ -601,11 +601,11 @@
         ]
     },
     {
-        "name": "Alaska",
+        "name": "Banff",
         "id": 9,
         "show":false,
-        "summerImage": "./images/destinationimages/alaska-summer.jpg",
-        "winterImage": "./images/destinationimages/alaska-winter.jpg",
+        "summerImage": "./images/destinationimages/banff-summer.jpg",
+        "winterImage": "./images/destinationimages/banff-winter.jpg",
         "summerGearList": [
             "Sleeping Bag/ Pad", 
             "Water Bottle/ Treatment", 

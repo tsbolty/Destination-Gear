@@ -15,7 +15,9 @@ const ViewNotes = ({id})=>{
         if(user){
         axios.get("/api/note/note")
             .then(res=> {
+                if(array.length < 5){
                 setArray(res.data.filter(note=> user.email === note.userEmail && note.location == id))
+                }
             })
         }
     }

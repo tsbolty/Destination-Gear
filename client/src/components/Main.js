@@ -19,22 +19,22 @@ const Main = ()=>{
         winter: false
     })
 
-    const summer = ["May", "Jun", "Jul", "Aug", "Sep", "Oct"]
+    const winter = ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr"]
     // const winter = /\bNov|\bDec|\bJan|\bFeb|\bMar|\bApr/g
 
     
     
     useEffect(()=>{
                 const month = currentTime.split(" ")[1]
-                if(summer.includes(month)){
-                    setSeason({
-                        summer: true,
-                        winter: false
-                    })
-                } else { 
+                if(winter.includes(month)){
                     setSeason({
                         summer: false,
                         winter: true
+                    })
+                } else { 
+                    setSeason({
+                        summer: true,
+                        winter: false
                     })
                 }
               
@@ -60,7 +60,6 @@ const Main = ()=>{
         <>
             <TimeContext.Provider value={{currentTime, setCurrentTime}}>
                 <div className= "container">
-                    <button>Summer or Winter</button>
                     <Navbar />
                     <Countdown />
                     <Calendar />

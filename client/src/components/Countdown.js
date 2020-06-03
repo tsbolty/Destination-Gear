@@ -6,21 +6,18 @@ const Countdown = ()=>{
 
     const {currentTime, setCurrentTime} = useContext(TimeContext)
 
-    let timeLeft = moment(currentTime.slice(4)).fromNow()
-
-    console.log(timeLeft)
-
-    let start = moment(currentTime)
-    let end = moment(Date.now())
+    let timeTilDeparture = moment(currentTime.slice(4)).fromNow()
+    
 
     return(
         <>
-        {timeLeft === "Invalid date"
+        {timeTilDeparture === "Invalid date"
         ?
         <h2>When is your departure date?</h2>
         :
-        <h2>Your trip {timeLeft.includes("ago") ? "was" : "is"} {timeLeft} </h2>
+        <h2>Your trip {timeTilDeparture.includes("ago") ? "was" : "is"} {timeTilDeparture} </h2>
         }
+        
         </>
     )
 }
