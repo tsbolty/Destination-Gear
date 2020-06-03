@@ -38,8 +38,7 @@
 
   li {
     position: relative;
-    margin-top: 1px;
-    margin-bottom: 1px;
+    background-color: #8a817c;
   }
 }
 
@@ -53,7 +52,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 1rem;
+  margin-left: 1rem;
   outline: none;
 
   &:checked {
@@ -64,7 +63,7 @@
       text-decoration: line-through;
       color: hsl(0, 0%, 70%);
       font-weight: 600;
-      background-color: hsl(0, 0%, 97%);
+      // background-color: hsl(0, 0%, 97%);
     }
 
     &:focus,
@@ -100,7 +99,7 @@
   // font-size: 17px;
   width: 100%;
   user-select: none;
-  border-bottom: 2px solid hsl(0, 0%, 93%);
+  // border-bottom: 2px solid hsl(0, 0%, 93%);
   cursor: pointer;
 
   &:hover {

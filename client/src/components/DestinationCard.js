@@ -57,7 +57,7 @@ function DestinationCard({ season }){
                         </div>
                     </div>
                     <div className= {`col-lg-6 half-${i %2 === 0 ? "right" : "left"}`}>
-                        <div className= "row">
+                        <div className= "row not-destination">
                             {destination.show &&
                             <>
                                 <Checklist destination={destination} season= {season}/>

@@ -8,25 +8,30 @@ const CreateNote = ({ getNotes, id })=>{
     const titleRef = useRef();
     const bodyRef = useRef();
 
-    const handleFormSubmit = e => {
-        e.preventDefault();
-        
-        axios.post("/api/note/note", {
-          title: titleRef.current.value,
-          body: bodyRef.current.value,
-          userEmail: user.email,
-          location: destinationKey
-        })
-        .then(res=> getNotes())
-        .catch(err=> console.log(err))
+    const handleFormSubmit = () => {
+        if(titleRef.current.value.length > 0){
+            axios.post("/api/note/note", {
+              title: titleRef.current.value,
+              body: bodyRef.current.value,
+              userEmail: user.email,
+              location: destinationKey
+            })
+            // clear input fields
+            .then(res=> getNotes())
+            .catch(err=> console.log(err))
+        }
     }
 
     return(
         <>
-            <input ref={titleRef}></input>
-            <textarea ref={bodyRef}></textarea>
-            <button onClick={handleFormSubmit}>submit</button>
-            
+            <h5>New Reminder</h5>
+            <form onSubmit={handleFormSubmit}>
+            <input ref={titleRef} className= "input-area" placeholder= "Title"></input>
+            <br />
+            <textarea ref={bodyRef} className= "input-area" placeholder= "Write your reminder here"></textarea>
+            <br />
+            <button>submit</button>
+            </form>
         </>
     )
 }

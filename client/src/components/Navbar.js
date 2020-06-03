@@ -7,7 +7,7 @@ function Navbar(){
     const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
     return(
-        <heading style= {{position: "relative", position: "fixed", zIndex: 99}}> 
+        <heading style= {{position: "fixed", zIndex: 99}}> 
             <Row className= "justify-content-end">
                 <div className= "col" id= "nav-header">
                 <div>

@@ -25,10 +25,11 @@ const ViewNotes = ({id})=>{
 
     return(
         
-        <div className= "col-lg-8 col-sm-8">
+        <div className= "col-lg-7 col-sm-7">
+            <h4>Reminders for this destination</h4>
             <ul >
                 {array.map(note=>(
-                    <li>
+                    <li className= "reminder-item">
                         <h4>{note.title}</h4>
                         <p>{note.body}</p>
                     </li>

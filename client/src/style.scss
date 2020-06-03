@@ -1,4 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
+@import "./images/destination-gear-logo.png"
 
 // @mixin phone {
 //     @media only screen and (max-width:480px){
@@ -20,6 +21,17 @@
 //         }
 //     }
 // }
+
+.input-area {
+  border-radius: 5px;
+  margin-top: 1rem;
+  background: #eff6ee;
+  width: 20rem;
+}
+
+.link-text {
+  color: #0000EE;
+}
 
 .container-fluid {
   background-color: #8a817c;
@@ -75,6 +87,18 @@
   padding: 0px;
 }
 
+.not-destination{
+  height: 100%;
+  width: 100%;
+  // margin-left: -15px;
+  // margin-top: 15px;
+  position: relative;
+  z-index: 4;
+  margin: 0px;
+  padding: 0px;
+  overflow-y: scroll;
+}
+
 .destination-text {
   position: absolute;
   // top: 50%;
@@ -98,12 +122,12 @@
   padding: 0px;
 }
 
-.col-x1-6 {
-  background: #9c6;
-  margin-bottom: 12px;
-  margin-top: 12px;
-  min-height: 200px;
-}
+// .col-x1-6 {
+//   background: #9c6;
+//   margin-bottom: 12px;
+//   margin-top: 12px;
+//   min-height: 200px;
+// }
 
 .half-left  img,
 .half-right img {
@@ -126,6 +150,10 @@
 
 #countdown {
   text-align: center;
+}
+
+.reminder-item {
+  list-style-image: url("./images/destination-gear-logo.png")
 }
 
 // #splash {
