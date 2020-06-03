@@ -61,6 +61,7 @@
 
 .checkboxes {
   list-style: none;
+  height: 40vh;
 }
 
 .destination-card {
@@ -69,12 +70,12 @@
   // margin-left: -15px;
   // margin-top: 15px;
   position: relative;
+  z-index: 5;
 }
 
 .destination-text {
-  position: relative;
+  position: absolute;
   // top: 50%;
-  margin-bottom: 0px;
   // margin-left: -5px;
   text-align: center;
   width: 100%;
@@ -102,8 +103,18 @@
 }
 .half-left  img,
 .half-right img {
-  height: auto;
+  height: 100vh;
   width: 100%;
+}
+
+.half-left h2,
+.half-right h2 {
+  top: 70%;
+  z-index: 5;
+}
+
+.half-left, .half-right{
+  padding: 0px;
 }
 
 #countdown {

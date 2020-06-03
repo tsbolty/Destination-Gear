@@ -25,19 +25,7 @@ function DestinationCard({ season }){
     //         document.scrollTop(this.parent().next().offset().top)
     //     }
     // })
-    
-    var direction;
-
-    for (const destination of destinations){
-        if (destination.id %2 === 0){
-            direction = "left"
-        } else {
-            direction = "right"
-        }
-    }
-        
-    
-
+ 
     
 
     const onClick = (id) => {
@@ -61,7 +49,7 @@ function DestinationCard({ season }){
                     {i %2 === 0
                     ?
                     <>
-                    <div key={destination.id} className= {`col-lg-6 half-${i %2 === 0 ? "left" : "right"}`}>
+                    <div key={destination.id} className= {`col-lg-6 half-${i %2 === 0 ? "left" : "right"} destination-card`}>
                         {/* <Col size= "xl-6 sm-12"> */}
                         {season.summer
                         ?
@@ -74,7 +62,7 @@ function DestinationCard({ season }){
                         </div>
                     </div>
                     <div className= {`col-lg-6 half-${i %2 === 0 ? "right" : "left"}`}>
-                        <div>
+                        <div className= "row">
                             {destination.show &&
                             <>
                                 <Checklist destination={destination} season= {season}/>
@@ -87,16 +75,15 @@ function DestinationCard({ season }){
                     :
                     <>
                     <div className= {`col-lg-6 half-${i %2 === 0 ? "right" : "left"}`}>
-                        <div>
-                            {destination.show &&
-                            <>
-                                <Checklist destination={destination} season= {season}/>
-                                <ViewNotes key={destination.id} id={destination.id}/>
-                            </>   
-                            }
+                        {destination.show &&
+                        <div className= "row">
+                            <Checklist destination={destination} season= {season}/>
+                            <ViewNotes key={destination.id} id={destination.id}/>
                         </div>
+                        }
                     </div>
-                    <div key={destination.id} className= {`col-lg-6 half-${i %2 === 0 ? "left" : "right"}`}>
+                    <div key={destination.id} 
+                    className= {`col-lg-6 half-${i %2 === 0 ? "left" : "right"}`}>
                         {/* <Col size= "xl-6 sm-12"> */}
                         {season.summer
                         ?

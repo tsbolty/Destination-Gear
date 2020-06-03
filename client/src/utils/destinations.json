@@ -1,7 +1,7 @@
 [
     {
         "name": "Maroon Bells",
-        "id": 2,
+        "id": 1,
         "show": false,
         "summerImage": "./images/destinationimages/maroonBells-summer.jpg",
         "winterImage": "./images/destinationimages/maroonBells-winter.jpg",
@@ -76,7 +76,7 @@
     },
     {
         "name": "Swiss Alps",
-        "id": 1,
+        "id": 2,
         "show": false,
         "summerImage": "./images/destinationimages/swissalps-summer.jpg",
         "winterImage": "./images/destinationimages/swissalps-winter.jpg",
