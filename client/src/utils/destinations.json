@@ -78,8 +78,8 @@
         "name": "Swiss Alps",
         "id": 1,
         "show": false,
-        "summerImage": "./images/destinationimages/swissAlps-summer.jpg",
-        "winterImage": "./images/destinationimages/swissAlps-winter.jpg",
+        "summerImage": "./images/destinationimages/swissalps-summer.jpg",
+        "winterImage": "./images/destinationimages/swissalps-winter.jpg",
         "summerGearList": [
             "Sleeping Bag/ Pad",
             "Water Bottle/ Treatment",
