@@ -1,4 +1,4 @@
 module.exports = {
   Note: require('./NoteModel'),
-  User: require('./UserModel')
+  // User: require('./UserModel')
 };

@@ -7,7 +7,6 @@ const Countdown = ()=>{
     const {currentTime, setCurrentTime} = useContext(TimeContext)
 
     let timeTilDeparture = moment(currentTime.slice(4)).fromNow()
-    
 
     return(
         <div id= "countdown">
@@ -17,7 +16,6 @@ const Countdown = ()=>{
         :
         <h2>Your trip {timeTilDeparture.includes("ago") ? "was" : "is"} {timeTilDeparture} </h2>
         }
-        
         </div>
     )
 }

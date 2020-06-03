@@ -22,6 +22,7 @@ app.use(session({
     saveUninitialized: true,
     // cookie: { secure: true }
 }));
+
 // Serve up static assets (usually on heroku)
 app.use(passport.initialize());
 app.use(passport.session());

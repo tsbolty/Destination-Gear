@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
-import Row from "./Row";
-import Col from "./Col";
+import React, { useState } from "react";
+// import { Link, animateScroll as scroll } from "react-scroll";
 import Destinations from "../utils/destinations.json"
 import Checklist from './Checklist';
 import ViewNotes from './ViewNotes';
@@ -26,8 +24,6 @@ function DestinationCard({ season }){
     //     }
     // })
  
-    
-
     const onClick = (id) => {
         const updated = destinations.map(destination=>{
           if(destination.id === id){
@@ -50,7 +46,6 @@ function DestinationCard({ season }){
                     ?
                     <>
                     <div key={destination.id} className= {`col-lg-6 half-${i %2 === 0 ? "left" : "right"} destination-card`}>
-                        {/* <Col size= "xl-6 sm-12"> */}
                         {season.summer
                         ?
                         <img src={destination.summerImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="summer"></img>
@@ -84,7 +79,6 @@ function DestinationCard({ season }){
                     </div>
                     <div key={destination.id} 
                     className= {`col-lg-6 half-${i %2 === 0 ? "left" : "right"}`}>
-                        {/* <Col size= "xl-6 sm-12"> */}
                         {season.summer
                         ?
                         <img src={destination.summerImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="summer"></img>

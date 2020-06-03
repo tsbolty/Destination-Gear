@@ -1,20 +1,12 @@
 import React, { useRef } from 'react';
 import axios from "axios";
-// import {userEmail} from './Profile'
-// import { PromiseProvider } from 'mongoose';
 import { useAuth0 } from "../react-auth0-spa";
-
-
-
 
 const CreateNote = ({ getNotes, id })=>{
     const { user } = useAuth0();
     const destinationKey = id
     const titleRef = useRef();
     const bodyRef = useRef();
-
-
-    // add userEmail to axios call
 
     const handleFormSubmit = e => {
         e.preventDefault();
@@ -29,7 +21,6 @@ const CreateNote = ({ getNotes, id })=>{
         .catch(err=> console.log(err))
     }
 
-
     return(
         <>
             <input ref={titleRef}></input>
@@ -38,7 +29,6 @@ const CreateNote = ({ getNotes, id })=>{
             
         </>
     )
-
 }
 
 export default CreateNote;

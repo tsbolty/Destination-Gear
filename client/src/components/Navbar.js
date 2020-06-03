@@ -1,6 +1,5 @@
 import React from "react";
 import Row from "./Row";
-import Col from "./Col";
 import { useAuth0 } from "../react-auth0-spa";
 
 function Navbar(){
@@ -21,9 +20,6 @@ function Navbar(){
                 </div>
                 </div>
             </Row>
-            {/* <Row style= {{backgroundColor: "black", height: ".7rem"}}></Row>
-            <Row style= {{backgroundColor: "white", height: ".001rem", marginBottom: ".25rem"}}></Row>
-            <Row style= {{backgroundColor: "black", height: ".7rem"}}></Row> */}
         </heading>
     )
 }

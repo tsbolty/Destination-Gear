@@ -14,9 +14,7 @@ const ViewNotes = ({id})=>{
         if(user){
         axios.get("/api/note/note")
             .then(res=> {
-                
                 setArray(res.data.filter(note=> user.email === note.userEmail && parseInt(note.location) === id))
-                
             })
         }
     }
@@ -35,12 +33,10 @@ const ViewNotes = ({id})=>{
                         <p>{note.body}</p>
                     </li>
                 ))}
-
             </ul>
             {user &&
             <CreateNote getNotes={getNotes} key={id} id={id}/>}
         </div>
-        
     )
 }
 

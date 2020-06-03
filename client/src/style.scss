@@ -31,7 +31,7 @@
 .container {
   // margin: -15px;
   max-width: 100%;
-
+  padding: 0px;
 }
 
 #heading {
@@ -61,7 +61,7 @@
 
 .checkboxes {
   list-style: none;
-  height: 40vh;
+  height: 100vh;
 }
 
 .destination-card {
@@ -71,6 +71,8 @@
   // margin-top: 15px;
   position: relative;
   z-index: 5;
+  margin: 0px;
+  padding: 0px;
 }
 
 .destination-text {
@@ -89,10 +91,11 @@
 
 .destination-image {
   width: 100%;
-  height: 10vh;
+  // height: 10vh;
   position: relative;
   display: block;
-  // margin-left: -5px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .col-x1-6 {
@@ -101,10 +104,13 @@
   margin-top: 12px;
   min-height: 200px;
 }
+
 .half-left  img,
 .half-right img {
   height: 100vh;
   width: 100%;
+  padding: 0px;
+  margin: 0px;
 }
 
 .half-left h2,
@@ -115,6 +121,7 @@
 
 .half-left, .half-right{
   padding: 0px;
+  margin: 0px;
 }
 
 #countdown {

@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import Destinations from '../utils/destinations.json';
-
-
 
 const Checklist = ({ destination, season })=>{
 
@@ -17,23 +14,6 @@ const Checklist = ({ destination, season })=>{
     //     }
     //     return setClicked(isClicked)
     // }
-
-
-
-    // const listEl = document.querySelectorAll("checkboxListItem")
-  
-    // if(season.summer){
-    //     listEl.appendChild(destination.summerGearListUrl.map(url=>{
-    //         return <a href={url}>Product recommendation</a>
-    //     }))
-    // } else if (season.winter){
-    //     listEl.appendChild(destination.winterGearListUrl.map(url=>{
-    //         return <a href={url}>Product recommendation</a>
-    //     }))
-    // }
-
-    
-
 
     return (
         <>
@@ -56,20 +36,14 @@ const Checklist = ({ destination, season })=>{
                         <a target= "_blank" href={destination.winterGearListUrl[i]}>{listItem}</a>
                         </label>
                     </li>
-                )}
-                
-                
-                    
+                )}    
                 {/* <li>
                     <input type="checkbox" id="cb1" key={Math.random(listItem.length)} name="cb1" checked />
                     <label htmlFor="cb1">{listItem}</label>
                 </li> */}
-                
             </ul>
-
         </>
-    )
-    
+    )   
 }
 
 export default Checklist;
