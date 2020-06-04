@@ -42,53 +42,84 @@ function DestinationCard({ season }){
             {destinations.map((destination, i)=>{
                 return(
                     <>
+                    {window.innerWidth > 991
+                    ?
+                    <>
                     {i %2 === 0
                     ?
                     <>
-                    <div key={destination.id} className= {`col-lg-6 half-${i %2 === 0 ? "left" : "right"} destination-card`}>
-                        {season.summer
-                        ?
-                        <img src={destination.summerImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="summer"></img>
-                        :
-                        <img src={destination.winterImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="winter"></img>
-                        }
-                        <div>
-                            <h2 className= "destination-text">{destination.name}</h2>
-                        </div>
-                    </div>
-                    <div className= {`col-lg-6 half-${i %2 === 0 ? "right" : "left"}`}>
-                        <div className= "row not-destination">
-                            {destination.show &&
-                            <>
-                                <Checklist destination={destination} season= {season}/>
-                                <ViewNotes key={destination.id} id={destination.id}/>
-                            </>   
+                        <div key={destination.id} className= {`col-lg-6 half-left destination-card`}>
+                            {season.summer
+                            ?
+                            <img src={destination.summerImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="summer"></img>
+                            :
+                            <img src={destination.winterImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="winter"></img>
                             }
+                            <div>
+                                <h2 className= "destination-text">{destination.name}</h2>
+                            </div>
                         </div>
-                    </div>
+                        <div className= {`col-lg-6 half-right`}>
+                            <div className= "row not-destination">
+                                {destination.show &&
+                                <>
+                                    <Checklist destination={destination} season= {season}/>
+                                    <ViewNotes key={destination.id} id={destination.id}/>
+                                </>   
+                                }
+                            </div>
+                        </div>
                     </>
                     :
                     <>
-                    <div className= {`col-lg-6 half-${i %2 === 0 ? "right" : "left"}`}>
-                        {destination.show &&
-                        <div className= "row">
-                            <Checklist destination={destination} season= {season}/>
-                            <ViewNotes key={destination.id} id={destination.id}/>
+                        <div className= {`col-lg-6 half-right`}>
+                            <div className= "row not-destination">
+                                {destination.show &&
+                                <>
+                                    <Checklist destination={destination} season= {season}/>
+                                    <ViewNotes key={destination.id} id={destination.id}/>
+                                </>   
+                                }
+                            </div>
                         </div>
-                        }
-                    </div>
-                    <div key={destination.id} 
-                    className= {`col-lg-6 half-${i %2 === 0 ? "left" : "right"}`}>
-                        {season.summer
-                        ?
-                        <img src={destination.summerImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="summer"></img>
-                        :
-                        <img src={destination.winterImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="winter"></img>
-                        }
-                        <div>
-                            <h2 className= "destination-text">{destination.name}</h2>
+                        <div key={destination.id} className= {`col-lg-6 half-left destination-card`}>
+                            {season.summer
+                            ?
+                            <img src={destination.summerImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="summer"></img>
+                            :
+                            <img src={destination.winterImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="winter"></img>
+                            }
+                            <div>
+                                <h2 className= "destination-text">{destination.name}</h2>
+                            </div>
                         </div>
-                    </div>
+                    </>
+                    }
+                    </>
+                    :
+                    <>
+                        <div key={destination.id} className= {`col-lg-6 half-left destination-card`}>
+                            {season.summer
+                            ?
+                            <img src={destination.summerImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="summer"></img>
+                            :
+                            <img src={destination.winterImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="winter"></img>
+                            }
+                            <div>
+                                <h2 className= "destination-text">{destination.name}</h2>
+                            </div>
+                        </div>
+                        <div className= {`col-lg-6 half-right`}>
+                            <div className= "row not-destination">
+                                {destination.show &&
+                                <>
+                                    <Checklist destination={destination} season= {season}/>
+                                    <ViewNotes key={destination.id} id={destination.id}/>
+                                </>   
+                                }
+                            </div>
+                        </div>
+                   
                     </>
                     }
                     </>

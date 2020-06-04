@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import axios from "axios";
 import { useAuth0 } from "../react-auth0-spa";
+import e from 'express';
 
 const CreateNote = ({ getNotes, id })=>{
     const { user } = useAuth0();
@@ -8,7 +9,8 @@ const CreateNote = ({ getNotes, id })=>{
     const titleRef = useRef();
     const bodyRef = useRef();
 
-    const handleFormSubmit = () => {
+    const handleFormSubmit = (e) => {
+        e.preventDefault()
         if(titleRef.current.value.length > 0){
             axios.post("/api/note/note", {
               title: titleRef.current.value,
@@ -22,6 +24,8 @@ const CreateNote = ({ getNotes, id })=>{
         }
     }
 
+    
+
     return(
         <>
             <h5>New Reminder</h5>
@@ -30,7 +34,7 @@ const CreateNote = ({ getNotes, id })=>{
             <br />
             <textarea ref={bodyRef} className= "input-area" placeholder= "Write your reminder here"></textarea>
             <br />
-            <button>submit</button>
+            <button onClick={handleFormSubmit}>submit</button>
             </form>
         </>
     )

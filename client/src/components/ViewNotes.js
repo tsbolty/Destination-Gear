@@ -19,6 +19,11 @@ const ViewNotes = ({id})=>{
         }
     }
 
+    const handleDelete = ()=>{
+        console.log("something")
+        // axios.delete("/api/note/delete/:id")
+    }
+
     useEffect(()=>{
         getNotes()
     }, [])
@@ -32,6 +37,7 @@ const ViewNotes = ({id})=>{
                     <li className= "reminder-item">
                         <h4>{note.title}</h4>
                         <p>{note.body}</p>
+                        <button onClick= {()=>handleDelete}>Delete</button>
                     </li>
                 ))}
             </ul>
