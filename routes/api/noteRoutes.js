@@ -2,7 +2,7 @@ const router = require("express").Router();
 const db = require("../../models");
 
 router.post("/note", ({body}, res)=>{
-    db.Note.create(body).then(data => res.json(data))
+    db.Note.create(body, {new: true}).then(data => res.json(data))
 })
 
 router.get("/note", (req, res)=>{

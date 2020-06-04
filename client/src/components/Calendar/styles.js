@@ -17,17 +17,17 @@ export const Arrow = styled.button`
 export const ArrowLeft = styled(Arrow)`
   border-right: 2.4em solid #ccc;
   left: 1.5rem;
-  :hover {
-    border-right-color: #de9648;
-  }
+  padding: .5rem;
+  background-color: #125e1f;
+  border-right-color: #de9648;
 `;
 
 export const ArrowRight = styled(Arrow)`
   border-left: 2.4em solid #ccc;
   right: 1.5rem;
-  :hover {
-    border-left-color: #de9648;
-  }
+  padding: .5rem;
+  background-color: #125e1f;
+  border-left-color: #de9648;
 `;
 
 export const CalendarContainer = styled.div`

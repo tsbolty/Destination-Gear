@@ -15,14 +15,15 @@ const ViewNotes = ({id, name})=>{
         axios.get("/api/note/note")
             .then(res=> {
                 setArray(res.data.filter(note=> user.email === note.userEmail && parseInt(note.location) === id))
+                console.log(array)
             })
         }
     }
 
     const handleDelete = (e)=>{
         e.preventDefault()
-        console.log("something")
-        // axios.delete("/api/note/note", )
+        // console.log(data._id)
+        // axios.delete("/api/note/note" )
     }
 
     useEffect(()=>{
