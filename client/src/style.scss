@@ -27,12 +27,17 @@
   width: 20rem;
 }
 
-.link-text {
+a {
+  color: #bcb8b1;
+}
+
+a:hover {
   color: #de9e48;
+  text-decoration: none;
 }
 
 .container-fluid {
-  background-color: #372c2e;
+  background-color: #2c2526;
   width: 100vw;
   padding: 0px;
   overflow-x: hidden;
@@ -44,7 +49,7 @@
 }
 
 #heading {
-  color: #125e1f;
+  color: #bcb8b1;
   text-align: center;
   font-size: 3rem;
   font-family: "Rye";
@@ -80,6 +85,7 @@
   z-index: 5;
   margin: 0px;
   padding: 0px;
+  box-shadow: .5px .5px 15px black;
 }
 
 .not-destination{
@@ -126,6 +132,12 @@
   width: 100%;
   padding: 0px;
   margin: 0px;
+  opacity: .6;
+  
+}
+.half-left  img:hover,
+.half-right img:hover{
+  opacity: .9;
 }
 
 .half-left h2,
@@ -235,5 +247,7 @@ html, body {
 #destination-links {
   position: fixed;
   z-index: 100;
+  text-align: center;
+  margin: 25px 5% 0px 65%;
 }
 

@@ -18,7 +18,7 @@ export const ArrowLeft = styled(Arrow)`
   border-right: 2.4em solid #ccc;
   left: 1.5rem;
   padding: .5rem;
-  background-color: #125e1f;
+  background-color: #bcb8b1;
   border-right-color: #de9648;
 `;
 
@@ -26,7 +26,7 @@ export const ArrowRight = styled(Arrow)`
   border-left: 2.4em solid #ccc;
   right: 1.5rem;
   padding: .5rem;
-  background-color: #125e1f;
+  background-color: #bcb8b1;
   border-left-color: #de9648;
 `;
 

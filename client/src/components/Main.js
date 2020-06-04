@@ -1,6 +1,6 @@
-import React, { useState, useEffect, Suspense, Lazy } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar'
-// import DestinationCard from './DestinationCard'
+import DestinationCard from './DestinationCard'
 import Calendar from './Calendar/index'
 import Datepicker from './Datepicker/index'
 import TimeContext from './context/TimeContext'
@@ -8,9 +8,9 @@ import Countdown from './Countdown'
 import DestinationLinks from './DestinationLinks'
 
 
+
 const Main = ()=>{
 
-    const DestinationCard = React.lazy(() => import('./DestinationCard'))
 
     const [currentTime, setCurrentTime] = useState("")
 
@@ -41,14 +41,12 @@ const Main = ()=>{
         <>
             <TimeContext.Provider value={{currentTime, setCurrentTime}}>
                 <div className= "container-fluid">
-                    <DestinationLinks />
                     <Navbar />
+                    <DestinationLinks />
                     <Countdown />
                     <Calendar />
                     <Datepicker />
-                    <Suspense fallback={<div>Loading...</div>}>
-                        <DestinationCard season={season}/>
-                    </Suspense>
+                    <DestinationCard season={season}/>
                 </div>
             </TimeContext.Provider>
         </>

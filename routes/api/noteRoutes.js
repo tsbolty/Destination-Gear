@@ -10,11 +10,9 @@ router.get("/note", (req, res)=>{
         .then(data=> res.json(data))
 })
 
-router.delete("/note", (req, res)=>{
-    db.Note.findByIdAndDelete(req.body.id)
-    .then(()=>{
-        res.json(true)
-    })
+router.delete("/note/:id", (req, res)=>{
+    db.Note.findByIdAndDelete(req.params.id)
+    .then(data=> res.json(data))
     .catch(err =>{
         res.json(err)
     })

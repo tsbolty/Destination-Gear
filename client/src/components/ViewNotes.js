@@ -15,15 +15,14 @@ const ViewNotes = ({id, name})=>{
         axios.get("/api/note/note")
             .then(res=> {
                 setArray(res.data.filter(note=> user.email === note.userEmail && parseInt(note.location) === id))
-                console.log(array)
             })
         }
     }
 
-    const handleDelete = (e)=>{
-        e.preventDefault()
+    const handleDelete = (id)=>{
         // console.log(data._id)
-        // axios.delete("/api/note/note" )
+        axios.delete("/api/note/note/" + id)
+        .then(res=> getNotes())
     }
 
     useEffect(()=>{
@@ -41,7 +40,7 @@ const ViewNotes = ({id, name})=>{
                     <li className= "reminder-item">
                         <h4 className= "reminder-item-text">{note.title}</h4>
                         <p className= "reminder-item-text">{note.body}</p>
-                        <div class="button_cont delete-reminder" align="center" onClick={handleDelete}>Delete</div>
+                        <div className="button_cont delete-reminder" align="center" onClick={()=>handleDelete(note._id)}>Delete</div>
                     </li>
                 ))}
             </ul>
