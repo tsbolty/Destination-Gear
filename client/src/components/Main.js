@@ -39,7 +39,7 @@ const Main = ()=>{
     return(
         <>
             <TimeContext.Provider value={{currentTime, setCurrentTime}}>
-                <div className= "container">
+                <div className= "container-fluid">
                     <Navbar />
                     <Countdown />
                     <Calendar />
