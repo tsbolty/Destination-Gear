@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+// import useState from 'react';
 
 const Checklist = ({ destination, season })=>{
 
@@ -18,6 +19,7 @@ const Checklist = ({ destination, season })=>{
     return (
         <>
             <ul className= "checkboxes col-lg-5 col-sm-5">
+                {/* checks for season and maps through corresponding array to generate checklist */}
                 {season.summer && destination.summerGearList.map((listItem, i)=> 
                     <li className="custom-control custom-checkbox" key={Math.random(listItem.length)}>
                         <input type="checkbox" id="cb1"  className= "checklistInput" name="cb1" />
@@ -35,6 +37,8 @@ const Checklist = ({ destination, season })=>{
                     </li>
                 )}
                 
+                {/* checks for season and maps through corresponding array to generate checklist */}
+    
                 {season.winter && destination.winterGearList.map((listItem, i)=>
                     <li className= "checkboxListItem" key={Math.random(listItem.length)}>
                         <input type="checkbox" id="cb1"  className= "checklistInput" name="cb1" />

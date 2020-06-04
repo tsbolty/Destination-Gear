@@ -19,10 +19,11 @@ const ViewNotes = ({id})=>{
         }
     }
 
-    // const handleDelete = ()=>{
-    //     console.log("something")
-    //     // axios.delete("/api/note/delete/:id")
-    // }
+    const handleDelete = (e)=>{
+        e.preventDefault()
+        console.log("something")
+        // axios.delete("/api/note/delete/:id")
+    }
 
     useEffect(()=>{
         getNotes()
@@ -31,13 +32,15 @@ const ViewNotes = ({id})=>{
     return(
         
         <div className= "col-lg-7 col-sm-7">
+            {array.length > 0 &&
             <h4>Reminders for this destination</h4>
+            }
             <ul >
                 {array.map(note=>(
                     <li className= "reminder-item">
                         <h4>{note.title}</h4>
                         <p>{note.body}</p>
-                        <button>Delete</button>
+                        <button onClick= {()=>handleDelete}>Delete</button>
                     </li>
                 ))}
             </ul>

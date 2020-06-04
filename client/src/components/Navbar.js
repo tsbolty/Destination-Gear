@@ -14,9 +14,9 @@ function Navbar(){
                     <img src= "./images/destination-gear-logo.png" alt= "logo" id= "logo"></img>
                     <h1 id= "heading">Destination Gear</h1>
                     {!isAuthenticated && (
-                        <button onClick={() => loginWithRedirect({})}>Log in</button>
+                        <button className= "login-button" onClick={() => loginWithRedirect({})}>Log in</button>
                         )}
-                    {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+                    {isAuthenticated && <button className= "login-button" onClick={() => logout()}>Log out</button>}
                 </div>
                 </div>
             </Row>

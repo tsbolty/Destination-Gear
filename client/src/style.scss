@@ -48,7 +48,7 @@
   color: #667761;
   float: right;
   // text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Rye";
   margin-top: .2em;
 }
@@ -103,7 +103,6 @@
   // margin-left: -5px;
   text-align: center;
   width: 100%;
-  color: white;
   background: #C0B8C3;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -137,7 +136,7 @@
 
 .half-left h2,
 .half-right h2 {
-  top: 70%;
+  top: 80%;
   z-index: 5;
 }
 
@@ -148,7 +147,58 @@
 
 #countdown {
   text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
 }
+
+$color: #667761;
+
+.login-button {
+  display: inline-block;
+  padding: .3rem .8rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: .15rem;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  margin-top: 1.2rem;
+  margin-right: 2rem;
+  margin-left: 1.5rem;
+  &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $color;
+      border-radius: 10rem;
+      z-index: -2;
+  }
+  &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: darken($color, 15%);
+      transition: all .3s;
+      border-radius: 10rem;
+      z-index: -1;
+  }
+  &:hover {
+      color: #fff;
+      &:before {
+          width: 100%;
+      }
+  }
+}
+
 
 // .reminder-item {
 //   list-style-image: url("./images/destination-gear-logo.png")

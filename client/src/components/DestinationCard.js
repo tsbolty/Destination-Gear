@@ -42,13 +42,16 @@ function DestinationCard({ season }){
             {destinations.map((destination, i)=>{
                 return(
                     <>
+                    {/* Outside turnery operator makes sure all div's go in the right place once the columns realign */}
                     {window.innerWidth > 991
                     ?
                     <>
+                    {/* Inside turnery operator alternates the images and checklist/reminders div's left and right */}
                     {i %2 === 0
                     ?
                     <>
                         <div key={destination.id} className= {`col-lg-6 half-left destination-card`}>
+                            {/* Checks for season state to determine which image to display */}
                             {season.summer
                             ?
                             <img src={destination.summerImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="summer"></img>
@@ -56,11 +59,16 @@ function DestinationCard({ season }){
                             <img src={destination.winterImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="winter"></img>
                             }
                             <div>
-                                <h2 className= "destination-text">{destination.name}</h2>
+                                {season.summer ?
+                                <h2 className= "destination-text" style={{color: "white"}}>{destination.name}</h2>
+                                :
+                                <h2 className= "destination-text" style={{color: "black"}}>{destination.name}</h2> 
+                                }
                             </div>
                         </div>
                         <div className= {`col-lg-6 half-right`}>
                             <div className= "row not-destination">
+                                {/* Toggles rendering of these components on click. Show is true/false and toggles on click */}
                                 {destination.show &&
                                 <>
                                     <Checklist destination={destination} season= {season}/>
@@ -90,8 +98,11 @@ function DestinationCard({ season }){
                             <img src={destination.winterImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="winter"></img>
                             }
                             <div>
-                                <h2 className= "destination-text">{destination.name}</h2>
-                            </div>
+                            {season.summer ?
+                                <h2 className= "destination-text" style={{color: "white"}}>{destination.name}</h2>
+                                :
+                                <h2 className= "destination-text" style={{color: "black"}}>{destination.name}</h2> 
+                            }                            </div>
                         </div>
                     </>
                     }
