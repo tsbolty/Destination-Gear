@@ -7,20 +7,20 @@ function Navbar(){
     const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
     return(
-        <heading style= {{position: "fixed", zIndex: 99}}> 
-            <Row className= "justify-content-end">
+        <div style= {{position: "fixed", zIndex: 99}}> 
+            <Row>
                 <div className= "col" id= "nav-header">
-                <div>
-                    <img src= "./images/destination-gear-logo.png" alt= "logo" id= "logo"></img>
-                    <h1 id= "heading">Destination Gear</h1>
-                    {!isAuthenticated && (
-                        <button className= "login-button" onClick={() => loginWithRedirect({})}>Log in</button>
-                        )}
-                    {isAuthenticated && <button className= "login-button" onClick={() => logout()}>Log out</button>}
-                </div>
+                    <div>
+                        <img src= "./images/destination-gear-logo.png" alt= "logo" id= "logo"></img>
+                        <h1 id= "heading">Destination Gear</h1>
+                        {!isAuthenticated && (
+                            <button className= "login-button" onClick={() => loginWithRedirect({})}>Log in</button>
+                            )}
+                        {isAuthenticated && <button className= "login-button" onClick={() => logout()}>Log out</button>}
+                    </div>
                 </div>
             </Row>
-        </heading>
+        </div>
     )
 }
 
