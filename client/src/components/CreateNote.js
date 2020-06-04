@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import axios from "axios";
 import { useAuth0 } from "../react-auth0-spa";
-import e from 'express';
 
 const CreateNote = ({ getNotes, id })=>{
     const { user } = useAuth0();
@@ -23,8 +22,6 @@ const CreateNote = ({ getNotes, id })=>{
             .catch(err=> console.log(err))
         }
     }
-
-    
 
     return(
         <>
