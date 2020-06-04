@@ -160,7 +160,7 @@ class Calendar extends Component {
       fn();
       this.pressureTimeout = setTimeout(() => {
         this.pressureTimer = setInterval(fn, 100);
-      }, 500);
+      }, 5000);
     }
   }
 
