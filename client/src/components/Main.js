@@ -5,6 +5,7 @@ import Calendar from './Calendar/index'
 import Datepicker from './Datepicker/index'
 import TimeContext from './context/TimeContext'
 import Countdown from './Countdown'
+import DestinationLinks from './DestinationLinks'
 
 
 const Main = ()=>{
@@ -40,6 +41,7 @@ const Main = ()=>{
         <>
             <TimeContext.Provider value={{currentTime, setCurrentTime}}>
                 <div className= "container-fluid">
+                    <DestinationLinks />
                     <Navbar />
                     <Countdown />
                     <Calendar />

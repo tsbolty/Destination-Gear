@@ -50,7 +50,7 @@ function DestinationCard({ season }){
                     {i %2 === 0
                     ?
                     <>
-                        <div key={destination.id} className= {`col-lg-6 half-left destination-card`}>
+                        <div key={destination.id} className= {`col-lg-6 half-left destination-card`} id={`destination${i}`}>
                             {/* Checks for season state to determine which image to display */}
                             {season.summer
                             ?
@@ -90,7 +90,7 @@ function DestinationCard({ season }){
                                 }
                             </div>
                         </div>
-                        <div key={destination.id} className= {`col-lg-6 half-left destination-card`}>
+                        <div key={destination.id} className= {`col-lg-6 half-left destination-card`} id={`destination${i}`}>
                             {season.summer
                             ?
                             <img src={destination.summerImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="summer"></img>
@@ -109,7 +109,7 @@ function DestinationCard({ season }){
                     </>
                     :
                     <>
-                        <div key={destination.id} className= {`col-lg-6 half-left destination-card`}>
+                        <div key={destination.id} className= {`col-lg-6 half-left destination-card`} id={`destination${i}`}>
                             {season.summer
                             ?
                             <img src={destination.summerImage} onClick={()=>onClick(destination.id)} className= "destination-image" alt="summer"></img>

@@ -10,9 +10,9 @@ const Countdown = ()=>{
 
     return(
         <>
-        {window.innerWidth < 473
+        {window.innerWidth < 494
         ?
-        <div id= "countdown" style= {{paddingTop: "12rem", textAlign: "center", paddingBottom: "2rem", color: "#de9e48"}}>
+        <div id= "countdown" style= {{paddingTop: "15rem", textAlign: "center", paddingBottom: "2rem", color: "#de9e48"}}>
         {timeTilDeparture === "Invalid date"
         ?
         <h2>When is your departure date?</h2>
