@@ -25,7 +25,7 @@ const CreateNote = ({ getNotes, id })=>{
 
     return(
         <>
-            <h5>New Reminder</h5>
+            <h5 className= "reminder-item">New Reminder</h5>
             <form onSubmit={handleFormSubmit}>
             <input ref={titleRef} className= "input-area" placeholder= "Title"></input>
             <br />

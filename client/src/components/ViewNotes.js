@@ -4,7 +4,7 @@ import CreateNote from './CreateNote';
 import { useAuth0 } from "../react-auth0-spa";
 
 
-const ViewNotes = ({id})=>{
+const ViewNotes = ({id, name})=>{
 
     const { user } = useAuth0()
 
@@ -19,11 +19,11 @@ const ViewNotes = ({id})=>{
         }
     }
 
-    const handleDelete = (e)=>{
-        e.preventDefault()
-        console.log("something")
-        // axios.delete("/api/note/delete/:id")
-    }
+    // const handleDelete = (e)=>{
+    //     e.preventDefault()
+    //     console.log("something")
+    //     axios.delete("/api/note/note", )
+    // }
 
     useEffect(()=>{
         getNotes()
@@ -33,14 +33,14 @@ const ViewNotes = ({id})=>{
         
         <div className= "col-lg-7 col-sm-7">
             {array.length > 0 &&
-            <h4>Reminders for this destination</h4>
+            <h4 className= "reminder-item">Reminders for {name}</h4>
             }
             <ul >
                 {array.map(note=>(
                     <li className= "reminder-item">
-                        <h4>{note.title}</h4>
-                        <p>{note.body}</p>
-                        <button onClick= {()=>handleDelete}>Delete</button>
+                        <h4 className= "reminder-item-text">{note.title}</h4>
+                        <p className= "reminder-item-text">{note.body}</p>
+                        <button>Delete</button>
                     </li>
                 ))}
             </ul>

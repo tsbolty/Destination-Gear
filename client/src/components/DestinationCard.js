@@ -72,7 +72,7 @@ function DestinationCard({ season }){
                                 {destination.show &&
                                 <>
                                     <Checklist destination={destination} season= {season}/>
-                                    <ViewNotes key={destination.id} id={destination.id}/>
+                                    <ViewNotes key={destination.id} id={destination.id} name={destination.name}/>
                                 </>   
                                 }
                             </div>
@@ -85,7 +85,7 @@ function DestinationCard({ season }){
                                 {destination.show &&
                                 <>
                                     <Checklist destination={destination} season= {season}/>
-                                    <ViewNotes key={destination.id} id={destination.id}/>
+                                    <ViewNotes key={destination.id} id={destination.id} name={destination.name}/>
                                 </>   
                                 }
                             </div>

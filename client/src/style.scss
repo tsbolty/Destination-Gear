@@ -28,11 +28,11 @@
 }
 
 .link-text {
-  color: #0000EE;
+  color: #de9e48;
 }
 
 .container-fluid {
-  background-color: #7c3c21;
+  background-color: #372c2e;
   width: 100vw;
   // margin-left: -15px;
   padding: 0px;
@@ -146,12 +146,6 @@
   margin: 0px;
 }
 
-// #countdown {
-//   text-align: center;
-//   padding-top: 5rem;
-//   padding-bottom: 2rem;
-// }
-
 $color: #E78200;
 
 .login-button {
@@ -202,8 +196,12 @@ $color: #E78200;
 }
 
 
-// .reminder-item {
-//   list-style-image: url("./images/destination-gear-logo.png")
-// }
+.reminder-item {
+  color: #ffffff;
+}
+
+.reminder-item-text {
+  color: #bcb8b1;
+}
 
 

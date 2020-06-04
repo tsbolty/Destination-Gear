@@ -12,7 +12,7 @@ const Countdown = ()=>{
         <>
         {window.innerWidth < 473
         ?
-        <div id= "countdown" style= {{paddingTop: "12rem", textAlign: "center", paddingBottom: "2rem"}}>
+        <div id= "countdown" style= {{paddingTop: "12rem", textAlign: "center", paddingBottom: "2rem", color: "#de9e48"}}>
         {timeTilDeparture === "Invalid date"
         ?
         <h2>When is your departure date?</h2>
@@ -33,7 +33,7 @@ const Countdown = ()=>{
         }
         </div>
         :
-        <div id= "countdown" style= {{paddingTop: "10rem", textAlign: "center", paddingBottom: "2rem"}}>
+        <div id= "countdown" style= {{paddingTop: "10rem", textAlign: "center", paddingBottom: "2rem", color: "#de9e48"}}>
         {timeTilDeparture === "Invalid date"
         ?
         <h2>When is your departure date?</h2>
