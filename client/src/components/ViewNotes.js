@@ -7,7 +7,6 @@ import { useAuth0 } from "../react-auth0-spa";
 const ViewNotes = ({id, name})=>{
 
     const { user } = useAuth0()
-
     const [array, setArray] = useState([])
     
     const getNotes = ()=>{
@@ -20,7 +19,6 @@ const ViewNotes = ({id, name})=>{
     }
 
     const handleDelete = (id)=>{
-        // console.log(data._id)
         axios.delete("/api/note/note/" + id)
         .then(res=> getNotes())
     }
@@ -33,18 +31,18 @@ const ViewNotes = ({id, name})=>{
         
         <div className= "col-lg-7 col-sm-7">
             {array.length > 0 &&
-            <h4 className= "reminder-item">Reminders for {name}</h4>
+            <h4 className= "reminder-item" style= {{marginTop: ".5rem"}}>Reminders for {name}</h4>
             }
             <ul id="reminder-list">
                 {array.map(note=>(
-                    <li className= "reminder-item">
+                    <li className= "reminder-item" key={Math.floor(Math.random * 1000000)}>
                         <h4 className= "reminder-item-text">{note.title}</h4>
                         <p className= "reminder-item-text">{note.body}</p>
                         <div className="button_cont delete-reminder" align="center" onClick={()=>handleDelete(note._id)}>Delete</div>
                     </li>
                 ))}
             </ul>
-            {user &&
+            {user && array.length < 5 &&
             <CreateNote getNotes={getNotes} key={id} id={id}/>}
         </div>
     )

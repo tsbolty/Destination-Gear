@@ -2,12 +2,9 @@ const express = require("express");
 var session = require("express-session");
 const mongoose = require("mongoose");
 const routes = require("./routes");
-// const passport = require("passport");
-// const colors = require("colors");
 const logger = require("morgan");
 const flash = require('connect-flash');
 require("dotenv").config();
-
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -23,11 +20,6 @@ app.use(session({
     saveUninitialized: true,
     // cookie: { secure: true }
 }));
-
-// Serve up static assets (usually on heroku)
-// app.use(passport.initialize());
-// app.use(passport.session());
-
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));

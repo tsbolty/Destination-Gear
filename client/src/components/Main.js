@@ -10,8 +10,7 @@ import DestinationLinks from './DestinationLinks'
 
 
 const Main = ()=>{
-
-
+    
     const [currentTime, setCurrentTime] = useState("")
 
     const [season, setSeason] = useState({
@@ -46,7 +45,7 @@ const Main = ()=>{
                     <Countdown />
                     <Calendar />
                     <Datepicker />
-                    <DestinationCard season={season}/>
+                    <DestinationCard season={season} />
                 </div>
             </TimeContext.Provider>
         </>

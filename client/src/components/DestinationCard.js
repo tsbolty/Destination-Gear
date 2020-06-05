@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { Link, animateScroll as scroll } from "react-scroll";
 import Destinations from "../utils/destinations.json"
 import Checklist from './Checklist';
 import ViewNotes from './ViewNotes';
@@ -7,22 +6,6 @@ import ViewNotes from './ViewNotes';
 function DestinationCard({ season }){
 
     const [destinations, setDestinations] = useState(Destinations)
-
-    // $(".button").on("click", function(e) {
-    //     $(document).scrollTop($(this).parent().next().offset().top);
-    //     // $(this).parent().next() // this is the next div container.
-    //     return false; // prevent anchor
-    // });
-
-    // const scrollBtn = document.getElementById("scroll-button")
-
-
-    // document.addEventListener('click', function(event){
-    //     if(event.target.matches(scrollBtn)){
-    //         event.preventDefault()
-    //         document.scrollTop(this.parent().next().offset().top)
-    //     }
-    // })
  
     const onClick = (id) => {
         const updated = destinations.map(destination=>{
@@ -31,7 +14,6 @@ function DestinationCard({ season }){
           }
           return destination
         })
-        
         setDestinations(updated)
     }
 
@@ -130,7 +112,6 @@ function DestinationCard({ season }){
                                 }
                             </div>
                         </div>
-                   
                     </>
                     }
                     </>

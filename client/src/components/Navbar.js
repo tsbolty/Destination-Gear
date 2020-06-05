@@ -1,5 +1,4 @@
 import React from "react";
-import Row from "./Row";
 import { useAuth0 } from "../react-auth0-spa";
 
 function Navbar(){
@@ -8,9 +7,9 @@ function Navbar(){
 
     return(
         <>
-        {window.innerWidth < 553
+        {window.innerWidth < 765
         ?
-        <div className= "row" style= {{position: "fixed", zIndex: 99, marginTop: "3.3rem"}}> 
+        <div className= "row" style= {{position: "fixed", zIndex: 99, marginTop: "1rem"}}> 
                 <div className= "col" id= "nav-header">
                     <div>
                         <img src= "./images/destination-gear-logo.png" alt= "logo" id= "logo"></img>

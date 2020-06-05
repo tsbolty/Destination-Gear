@@ -17,8 +17,8 @@ const CreateNote = ({ getNotes, id })=>{
               userEmail: user.email,
               location: destinationKey
             })
-            // clear input fields
             .then(res=> getNotes())
+            .then(titleRef.current.value= "", bodyRef.current.value = "")
             .catch(err=> console.log(err))
         }
     }

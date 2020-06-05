@@ -1,31 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
 
-// @mixin phone {
-//     @media only screen and (max-width:480px){
-//         @content;
-//     }
-// }
-
-// .card-div {
-//     .destination-card {
-//         height: 100%;
-//         width: 100%;
-//         position: relative;
-//     }
-    
-//     @include phone {
-//         .destination-card {
-//             height: 50%
-//         }
-//     }
-// }
-
-.input-area {
-  border-radius: 5px;
-  margin-top: 1rem;
-  background: #eff6ee;
-  width: 20rem;
+html, body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
+
 
 a {
   color: #bcb8b1;
@@ -35,6 +14,13 @@ a:hover {
   color: #de9e48;
   text-decoration: none;
 }
+
+.checkboxes {
+  list-style: none;
+  height: 100vh;
+}
+
+$color: #E78200;
 
 .container-fluid {
   background-color: #2c2526;
@@ -48,34 +34,31 @@ a:hover {
   padding: 0px;
 }
 
-#heading {
-  color: #bcb8b1;
+.delete-reminder {
+  color: #ffffff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .7em;
+  background: #bcb8b1;
+  padding: .25rem;
+  border: 4px solid #494949 !important;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+}
+
+.delete-reminder:hover {
+  color: #ffffff !important;
+  background: #de9e48;
+  border-color: #de9e48 !important;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+#destination-links {
+  position: fixed;
+  z-index: 100;
   text-align: center;
-  font-size: 3rem;
-  font-family: "Rye";
-  margin-top: .2em;
-}
-
-#logo {
-  float: left;
-  height: 4rem;
-  margin-top: .2rem;
-  margin-left: 1rem;
-}
-
-.nav-buttons {
-  float: right;
-  list-style: none
-}
-
-#nav-header {
-  height: 4.5rem;
-  // background-color: #157017;
-}
-
-.checkboxes {
-  list-style: none;
-  height: 100vh;
+  margin: 25px 5% 0px 65%;
 }
 
 .destination-card {
@@ -88,20 +71,15 @@ a:hover {
   box-shadow: .5px .5px 15px black;
 }
 
-.not-destination{
-  height: 100%;
+.destination-image {
   width: 100%;
   position: relative;
-  z-index: 4;
+  display: block;
   margin: 0px;
   padding: 0px;
-  // overflow-y: scroll;
 }
-
 .destination-text {
   position: absolute;
-  // top: 50%;
-  // margin-left: -5px;
   text-align: center;
   width: 100%;
   background: #C0B8C3;
@@ -110,21 +88,6 @@ a:hover {
   opacity: .8;
   z-index: 1;
 }
-
-.destination-image {
-  width: 100%;
-  position: relative;
-  display: block;
-  margin: 0px;
-  padding: 0px;
-}
-
-// .col-x1-6 {
-//   background: #9c6;
-//   margin-bottom: 12px;
-//   margin-top: 12px;
-//   min-height: 200px;
-// }
 
 .half-left  img,
 .half-right img {
@@ -135,6 +98,7 @@ a:hover {
   opacity: .6;
   
 }
+
 .half-left  img:hover,
 .half-right img:hover{
   opacity: .9;
@@ -151,7 +115,21 @@ a:hover {
   margin: 0px;
 }
 
-$color: #E78200;
+#heading {
+  color: #bcb8b1;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Rye";
+  margin-top: .2em;
+}
+
+.input-area {
+  border-radius: 5px;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  background: #eff6ee;
+  width: 20rem;
+}
 
 .login-button {
   display: inline-block;
@@ -200,6 +178,30 @@ $color: #E78200;
   }
 }
 
+#logo {
+  float: left;
+  height: 4rem;
+  margin-top: .2rem;
+  margin-left: 1rem;
+}
+.nav-buttons {
+  float: right;
+  list-style: none
+}
+
+#nav-header {
+  height: 4.5rem;
+}
+
+.not-destination{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 4;
+  margin: 0px;
+  padding: 0px;
+  // overflow-y: scroll;
+}
 
 .reminder-item {
   color: #ffffff;
@@ -207,47 +209,14 @@ $color: #E78200;
 
 .reminder-item-text {
   color: #bcb8b1;
+  margin: .2rem;
 }
 
 #reminder-list {
   list-style: none;
 }
 
-.delete-reminder {
-  color: #ffffff !important;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: .7em;
-  background: #bcb8b1;
-  padding: .25rem;
-  border: 4px solid #494949 !important;
-  display: inline-block;
-  transition: all 0.4s ease 0s;
-  }
-
-  .delete-reminder:hover {
-    color: #ffffff !important;
-    background: #de9e48;
-    border-color: #de9e48 !important;
-    transition: all 0.4s ease 0s;
-    cursor: pointer;
-  }
-
-html, body {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
 .scroll-button {
   color: #bcb8b1;
-  // scroll-behavior: smooth;
   margin-left: 1rem;
 }
-
-#destination-links {
-  position: fixed;
-  z-index: 100;
-  text-align: center;
-  margin: 25px 5% 0px 65%;
-}
-
