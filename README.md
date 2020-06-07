@@ -10,10 +10,10 @@ If the user would like to log in, they will be given the opportunity to create, 
 
 ## Primary Technologies
 
-React
-MongoDB
-Auth0
-Axios
-Express
-Bootstrap
-Moment js
+* React
+* MongoDB
+* Auth0
+* Axios
+* Express
+* Bootstrap
+* Moment js
