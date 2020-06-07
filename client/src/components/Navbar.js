@@ -9,7 +9,7 @@ function Navbar(){
         <>
         {window.innerWidth < 765
         ?
-        <div className= "row" style= {{position: "fixed", zIndex: 99, marginTop: "1rem"}}> 
+        <div className= "row" style= {{position: "relative", zIndex: 99, marginTop: "1rem"}}> 
                 <div className= "col" id= "nav-header">
                     <div>
                         <img src= "./images/destination-gear-logo.png" alt= "logo" id= "logo"></img>
