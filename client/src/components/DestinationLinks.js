@@ -3,6 +3,8 @@ import React from 'react';
 const DestinationLinks = ()=>{
     return(
         <>
+        {/* For smooth scrolling feature on medium and large screen devices
+         */}
             {window.innerWidth > 765
             ?
             <div id="destination-links">

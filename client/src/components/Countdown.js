@@ -10,6 +10,8 @@ const Countdown = ()=>{
 
     return(
         <>
+        {/* Checks window size to determine style properties */}
+        {/* small screen style */}
         {window.innerWidth < 494
         ?
         <div id= "countdown" style= {{paddingTop: "8rem", textAlign: "center", paddingBottom: "2rem", color: "#bcb8b1"}}>
@@ -33,6 +35,7 @@ const Countdown = ()=>{
         }
         </div>
         :
+        // Medium and large size screen styling
         <div id= "countdown" style= {{paddingTop: "10rem", textAlign: "center", paddingBottom: "2rem", color: "#bcb8b1"}}>
         {timeTilDeparture === "Invalid date"
         ?

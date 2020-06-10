@@ -8,6 +8,7 @@ const CreateNote = ({ getNotes, id })=>{
     const titleRef = useRef();
     const bodyRef = useRef();
 
+    // Checks for content in title, posts note to database with user's email and destination location to be referenced later
     const handleFormSubmit = (e) => {
         e.preventDefault()
         if(titleRef.current.value.length > 0){
@@ -18,6 +19,7 @@ const CreateNote = ({ getNotes, id })=>{
               location: destinationKey
             })
             .then(res=> getNotes())
+            // Clears input fields after post
             .then(titleRef.current.value= "", bodyRef.current.value = "")
             .catch(err=> console.log(err))
         }

@@ -7,6 +7,7 @@ function Navbar(){
 
     return(
         <>
+        {/* Checks window size for styling purposes */}
         {window.innerWidth < 765
         ?
         <div className= "row" style= {{position: "relative", zIndex: 99, marginTop: "1rem"}}> 
@@ -28,6 +29,7 @@ function Navbar(){
                 </div>
         </div>
         :
+        // Checking for window size of less than 1001px
         window.innerWidth < 1001
         ?
         <div className= "row" style= {{position: "fixed", zIndex: 99, marginTop: "2.2rem"}}> 

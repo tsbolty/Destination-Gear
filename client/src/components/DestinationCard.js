@@ -21,6 +21,7 @@ function DestinationCard({ season }){
         <>
             <div className= "container-fluid">
                 <div className= "row">
+            {/* Maps through destinations object, also takes in "i" to determine odd or even value to stagger images and checklists/notes */}
             {destinations.map((destination, i)=>{
                 return(
                     <>
