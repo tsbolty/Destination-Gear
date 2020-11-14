@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Calendar from "../Calendar";
-import * as Styled from "./styles";
+// import Calendar from "../Calendar";
+// import * as Styled from "./styles";
 import { isDate, getDateISO } from "../../helpers/calendar";
 import TimeContext from '../context/TimeContext'
 
@@ -50,8 +50,8 @@ class Datepicker extends React.Component {
 
 
 render() {
-    const { label } = this.props;
-    const { date, calendarOpen } = this.state;
+    // const { label } = this.props;
+    // const { date, calendarOpen } = this.state;
 
     return (
       <>

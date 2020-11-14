@@ -10,7 +10,7 @@ const Checklist = ({ destination, season })=>{
                     <li className="custom-control custom-checkbox" key={Math.random(listItem.length)}>
                         <input type="checkbox" id="cb1"  className= "checklistInput" name="cb1" />
                         <label htmlFor="cb1" className= "checkboxLabel">
-                            <a target= "_blank" className= "link-text"href={destination.summerGearListUrl[i]}>{listItem}</a>
+                            <a target= "_blank" rel="noopener noreferrer" className= "link-text"href={destination.summerGearListUrl[i]}>{listItem}</a>
                         </label>
                     </li>
                 )}
@@ -21,7 +21,7 @@ const Checklist = ({ destination, season })=>{
                     <li className= "checkboxListItem" key={Math.random(listItem.length)}>
                         <input type="checkbox" id="cb1"  className= "checklistInput" name="cb1" />
                         <label htmlFor="cb1" className= "checkboxLabel">
-                        <a target= "_blank" href={destination.winterGearListUrl[i]}>{listItem}</a>
+                        <a target= "_blank" rel="noopener noreferrer" href={destination.winterGearListUrl[i]}>{listItem}</a>
                         </label>
                     </li>
                 )}

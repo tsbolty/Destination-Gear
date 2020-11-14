@@ -194,7 +194,7 @@ class Calendar extends Component {
   componentDidUpdate(prevProps) {
     const { date, onDateChanged } = this.props;
     const { date: prevDate } = prevProps;
-    const dateMatch = date == prevDate || isSameDay(date, prevDate);
+    const dateMatch = date === prevDate || isSameDay(date, prevDate);
 
     !dateMatch &&
       this.setState(this.resolveStateFromDate(date), () => {

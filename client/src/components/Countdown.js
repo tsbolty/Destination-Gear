@@ -4,7 +4,7 @@ import moment from 'moment'
 
 const Countdown = ()=>{
 
-    const {currentTime, setCurrentTime} = useContext(TimeContext)
+    const {currentTime} = useContext(TimeContext)
 
     let timeTilDeparture = moment(currentTime.slice(4)).fromNow()
 

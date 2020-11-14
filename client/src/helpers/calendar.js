@@ -140,7 +140,7 @@ export const CALENDAR_MONTHS = {
   
   // (string) Formats the given date as YYYY-MM-DD
   // Months and Days are zero padded
-  export const getDateISO = (date = new Date) => {
+  export const getDateISO = function(date = new Date) {
     
     if (!isDate(date)) return null;
   

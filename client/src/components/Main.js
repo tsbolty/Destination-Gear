@@ -19,10 +19,10 @@ const Main = ()=>{
         winter: false
     })
 
-    const winter = ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr"]
     
     // Checks if the current time (gathered and updated from calendar) includes any winter months. Changes season state accordingly
     useEffect(()=>{
+      const winter = ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr"]
         const month = currentTime.split(" ")[1]
         if(winter.includes(month)){
             setSeason({
