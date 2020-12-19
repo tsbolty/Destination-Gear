@@ -1,6 +1,8 @@
 import React from 'react';
 
 const DestinationLinks = ()=>{
+
+  
     return(
         <>
         {/* For smooth scrolling feature on medium and large screen devices
