@@ -1,4 +1,5 @@
 import React from 'react';
+import Input from './Input';
 
 const Checklist = ({ destination, season })=>{
 
@@ -8,7 +9,7 @@ const Checklist = ({ destination, season })=>{
                 {/* checks for season and maps through corresponding array to generate checklist */}
                 {season.summer && destination.summerGearList.map((listItem, i)=> 
                     <li className="custom-control custom-checkbox" key={Math.random(listItem.length)}>
-                        <input type="checkbox" id="cb1"  className= "checklistInput" name="cb1" />
+                        <Input />
                         <label htmlFor="cb1" className= "checkboxLabel">
                             <a target= "_blank" rel="noopener noreferrer" className= "link-text"href={destination.summerGearListUrl[i]}>{listItem}</a>
                         </label>
